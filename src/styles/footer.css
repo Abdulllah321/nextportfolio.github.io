@@ -1,0 +1,148 @@
+footer.footer {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  height: 100vh;
+  background: var(--primary);
+  color: var(--light);
+}
+
+footer .footerButton {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  z-index: 1;
+}
+
+footer .footerButton .roundedButton {
+  z-index: 1;
+  background: var(--light);
+  color: var(--dark);
+  border: none;
+}
+footer .footerButton .circle {
+  background-color: var(--dark);
+}
+footer .top {
+  width: 85%;
+  margin-left: 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--light);
+  height: 50vh;
+}
+
+footer .top h1 {
+  font-size: 41px;
+}
+
+footer .bottom {
+  width: 85%;
+  height: 40vh;
+  margin-left: 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .bottom .left {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .bottom .left > .top1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(20px, 1.6667vw, 32px);
+  font-weight: 500;
+  position: relative;
+}
+footer .bottom .left > .top1 > .input {
+  width: 400px;
+  position: relative;
+}
+footer .bottom .left > .top1 > .input > input {
+  width: 100%;
+  position: relative;
+  background: transparent;
+  border: none;
+  padding: 10px 5px;
+  border-bottom: 1px solid grey;
+  transition: border 0.5s ease-in-out;
+  outline: none;
+  font-size: 1.2rem;
+}
+
+footer .bottom .left > .top1 > .input > input:focus {
+  border-bottom: 2px solid var(--light);
+}
+
+footer .bottom .left > .top1 > .input > button {
+  position: absolute;
+  padding: 5px 15px;
+  border-radius: 50px;
+  right: 0;
+  bottom: 10px;
+  background-color: transparent;
+  border: 1px solid var(--light);
+  transition: 0.5s background-color color ease;
+  color: var(--light);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+footer .bottom .left > .top1 > .input > button:hover {
+  background-color: var(--light);
+  border: none;
+  color: var(--dark);
+}
+
+footer .bottom .left > .top1 > .input {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10%;
+}
+footer .bottom1 {
+  border-top: 1px solid var(--light);
+}
+footer .bottom1,
+footer .bottom1 a {
+  position: relative;
+  font-size: 1.56rem;
+  color: var(--light);
+  height: 10vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .bottom .right > .center {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .bottom .right h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+footer .bottom .right li {
+  list-style-type: none;
+}
+
+footer .bottom .right h2 {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+footer .bottom .right li > a {
+  color: var(--light);
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+}
