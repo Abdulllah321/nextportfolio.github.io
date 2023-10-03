@@ -3,6 +3,7 @@ import { technologies } from "./Constants";
 import Image from "next/image";
 import gsap from "gsap";
 import { FaXmark } from "react-icons/fa6";
+import AnimatedText from "./AnimatedText";
 
 const Skills = () => {
   const [skillOpened, setSkillOpened] = useState(false);
@@ -79,7 +80,7 @@ const Skills = () => {
 
   return (
     <div className="w-full m-auto  p-0 relative">
-      <h2 className="font-bold text-8xl w-full text-center mt-48">Skills</h2>
+      <AnimatedText text={`Skills`} />
       <div
         className="w-full h-[50vh] relative flex items-center justify-center
       flex-col skill mt-40 p-0 m-0"

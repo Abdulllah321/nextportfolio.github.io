@@ -19,10 +19,10 @@ const CV = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(".cv1", {
-      borderRadius: "1rem",
+      borderRadius: "1rem 1rem 0 0",
     });
     gsap.to(".cv3", {
-      borderRadius: "1rem",
+      borderRadius: "0 0 1rem 1rem",
     });
 
     // Other animations triggered by scrolling
@@ -68,7 +68,7 @@ const CV = () => {
         trigger: ".cv",
         start: "top 60%",
         end: "100% 10%",
-        scrub: 1,
+        scrub: true,
       },
     });
 
@@ -241,10 +241,10 @@ const CV = () => {
           </div> 
         </div>*/}
         <div className="absolute top-0 w-full h-full m-auto text-center z-30 flex items-center justify-center flex-col cvDetails p-4">
-          <h1 className="text-[--light] text-[40px] mb-6 font-bold ">
+          <h1 className="text-light text-[40px] mb-6 font-bold ">
             Abdullah Sufyan
           </h1>
-          <p className="text-[--light] text-left ml-3 ">
+          <p className="text-light text-left ml-3 ">
             I'm a web developer with a knack for creating all sorts of websites,
             both the front-end, which is what you see and interact with, and the
             back-end, the behind-the-scenes magic that makes websites work. I

@@ -1,10 +1,10 @@
 .menu{
     height: 100vh;
-    background-color: rgb(41, 41, 41);
+    background-color: var(--dark);
     position: fixed;
     right: 0;
     top: 0;
-    color: white;
+    color: var(--light);
     z-index: 3;
     .body{
         box-sizing: border-box;
@@ -22,8 +22,8 @@
             margin-top: 80px;
 
             .header{
-                color: rgb(153, 153, 153);
-                border-bottom: 1px solid rgb(153, 153, 153);
+                color: var(--grey);
+                border-bottom: 1px solid var(--grey);
                 text-transform: uppercase;
                 font-size: 11px;
                 margin-bottom: 40px;
@@ -31,7 +31,7 @@
 
             a{
                 text-decoration: none;
-                color: white;
+                color: var(--light);
                 font-weight: 300;
             }
             

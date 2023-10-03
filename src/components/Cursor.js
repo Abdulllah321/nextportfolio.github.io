@@ -36,7 +36,7 @@ const Cursor = () => {
     });
 
     const links = document.querySelectorAll(
-      "a, .project_projectVideo__Scvvx, input, .style_nav__I2WqP, .style_headerButtonContainer__LMJxd"
+      "a, .project_projectVideo__Scvvx, input, .style_headerButtonContainer__LMJxd, .theme-switch, button"
     );
 
     links.forEach((link) => {

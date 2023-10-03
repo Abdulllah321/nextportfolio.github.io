@@ -6,7 +6,25 @@
   --dark: #1b1b1b;
   --light: #f5f5f5;
   --primary: #3a6073;
-  --primary-dark: #2196f3;
+  --primary-dark: #3498db ;
+  --grey: #808080;
+  --darkLight: #1b1b1b60;
+  --font-mont: "Montserrat", sans-serif;
+}
+
+.dark{
+  --light: #1b1b1b;
+  --dark: #f5f5f5;
+  --primary-dark: #3a6073;
+  --primary: #3498db;
+  --grey: #808080;
+  --darkLight: #f5f5f560 ;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -24,7 +42,7 @@ body {
   transition-timing-function: ease-out;
   animation: cursorAnim 0.5s infinite alternate;
   background: transparent;
-  z-index: 1001;
+  z-index: 10001;
   pointer-events: none;
   display: flex;
   align-items: center;
@@ -41,7 +59,7 @@ body {
   opacity: 0.3;
   top: -6px;
   left: -6px;
-  z-index: 1000;
+  z-index: 10000;
   animation: cursorAnim2 0.5s infinite alternate;
 }
 @keyframes cursorAnim {
@@ -95,25 +113,25 @@ body {
 /* skills.js */
 .ball {
   display: block;
-  background: black;
+  background: var(--dark);
   margin: auto;
   border-radius: 50%;
   height: 7rem;
   width: 7rem;
-  background: radial-gradient(circle at 100px 80px, var(--light), #3a6073);
+  background: radial-gradient(circle at 100px 80px, #f5f5f5, var(--primary));
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
   padding: 15px;
   z-index: 20;
+  mix-blend-mode: difference;
 }
 
 .toggle {
-  background: radial-gradient(circle, #3a6073, #16222a);
+  background: radial-gradient(circle, var(--primary), #21323e);
   cursor: pointer;
-  border: 2px solid var(--light);
-  color: var(--light);
+  border: 2px solid var(--darkLight);
   height: 130px;
   width: 130px;
   text-align: center;
@@ -122,6 +140,7 @@ body {
   justify-content: center;
   border-radius: 100%;
   text-transform: uppercase;
+  font-weight: bold;
   font-family: "Muli-LightItalic", Helvetica;
   font-size: 20px;
   line-height: 30px;
@@ -132,7 +151,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #f5f5f5;
 }
+
 .roundedButton {
   border: 1px solid #888;
   cursor: pointer;
@@ -190,11 +211,11 @@ body {
 
 @keyframes ripple {
   0% {
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.3),
-      0 0 0 3px rgba(0, 0, 0, 0.3), 0 0 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 0 var(--darkLight), 0 0 0 1px var(--darkLight),
+      0 0 0 3px var(--darkLight), 0 0 0 5px var(--darkLight);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3), 0 0 0 4px rgba(0, 0, 0, 0.3),
+    box-shadow: 0 0 0 0 var(--darkLight), 0 0 0 4px var(--darkLight),
       0 0 0 20px rgba(0, 0, 0, 0), 0 0 0 30px rgba(0, 0, 0, 0);
   }
 }
@@ -310,12 +331,14 @@ body {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--light);
 }
 ::-webkit-scrollbar-thumb {
   background: rgb(191, 191, 191);
   border-radius: 100px;
 }
+
+
 .slidersOfImages {
   min-height: 100vh;
   padding-top: 10%;
@@ -366,7 +389,12 @@ body {
 /* Contact */
 .Contact_button__Y1MHX .roundedButton {
   background: var(--dark);
-  transition: 0.5s all cubic-bezier(0.19, 1, 0.22, 1);
   color: var(--light);
 }
+.Contact_button__Y1MHX .roundedButton:hover span{
+  color: #f5f5f5;
+}
 
+.style_button__J07Df.active {
+  background: var(--primary) !important;
+}

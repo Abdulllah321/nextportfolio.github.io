@@ -2,13 +2,14 @@ import { useRef } from "react";
 import React from "react";
 import { useScroll, motion } from "framer-motion";
 import LiIcon from "./LiIcon";
+import AnimatedText from "./AnimatedText";
 
 const Details = ({ type, time, place, info }) => {
   const ref = useRef(null);
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last: mb-8 w-[60%] overflow-hidden mx-auto flex flex-col items-center justify-between"
+      className="my-8 first:mt-0 last: mb-8 w-[60%] overflow-hidden mx-auto flex flex-col items-center justify-between text-[--dark] "
     >
       <LiIcon references={ref} />
       <motion.div
@@ -24,7 +25,7 @@ const Details = ({ type, time, place, info }) => {
         }}
       >
         <h3 className="capitalize font-bold text-2xl">{type}&nbsp;</h3>
-        <span className="capitalize font-medium text-dark/75">
+        <span className="capitalize font-medium text-[--grey] mb-7">
           {time} | {place}
         </span>
         <p className="font-medium w-full">{info}</p>
@@ -43,12 +44,11 @@ const Education = () => {
 
   return (
     <div className="my-64">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center">Education</h2>
-
+      <AnimatedText text={`Education`} className="pb-32" />
       <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-[1.5px] w-[4px] h-full bg-dark origin-top rounded-full"
+          className="absolute left-9 top-[1.5px] w-[4px] h-full bg-[--dark] origin-top rounded-full"
         />
 
         <ul className="w-full flex flex-col items-start justify-between ml-4">
@@ -93,7 +93,7 @@ Intelligence."
             place="Massachusetts Institute Of Technology (MIT)"
             info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
 "
-className="relative pb-18"
+            className="relative pb-18"
           />
         </ul>
       </div>

@@ -6,7 +6,7 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
-import CurveSvg from "@/components/curveSvg";
+// import CurveSvg from "@/components/curveSvg";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -27,13 +27,14 @@ export default function App({ Component, pageProps }) {
     setDisplayText(pathname === "/" ? "Home" : pathname.replace("/", ""));
   }, [pathname]);
 
+  
+
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Component {...pageProps} /> */}
 
       <AnimatePresence mode="wait">
         <motion.div
@@ -42,7 +43,7 @@ export default function App({ Component, pageProps }) {
         >
           <Component {...pageProps} />
           <motion.div
-            className="fixed top-0 bottom-0 bg-[--dark] w-screen h-screen z-[1000] flex justify-center items-center origin-bottom "
+            className={`fixed top-0 bottom-0 bg-[--dark] w-screen h-screen z-[1000] flex justify-center items-center origin-top`}
             initial={{ scaleY: 0 }}
             animate={{ scaleY: 0 }}
             exit={{ scaleY: 1 }}
@@ -60,7 +61,7 @@ export default function App({ Component, pageProps }) {
             </motion.h1>
           </motion.div>
           <motion.div
-            className="fixed top-0 bottom-0 bg-[--dark] w-screen h-screen z-[1000] flex justify-center items-center origin-top "
+            className={`fixed top-0 bottom-0 bg-[--dark] w-screen h-screen z-[1000] flex justify-center items-center origin-bottom`}
             initial={{ scaleY: 1 }}
             animate={{ scaleY: 0 }}
             exit={{ scaleY: 0 }}

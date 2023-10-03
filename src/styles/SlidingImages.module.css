@@ -9,7 +9,7 @@
   white-space: nowrap;
   top: 0;
   display: flex;
-  width: 100vw;
+  width: 100%;
   margin: auto;
   overflow: hidden;
   gap: 10px;

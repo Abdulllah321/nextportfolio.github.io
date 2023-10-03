@@ -6,7 +6,6 @@ import { menuSlide } from "../animation";
 import Link from "./Link";
 import Curve from "./Curve";
 import Footer from "./Footer";
-import MagneticButton from "@/components/MagneticButton";
 
 const navItems = [
   {

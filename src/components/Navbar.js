@@ -4,13 +4,15 @@ import React from "react";
 import Logos from "./Logo";
 import {
   DribbbleIcon,
-  GithubIcon,
   LinkedInIcon,
+  MoonIcon,
   PinterestIcon,
-  TwitterIcon,
+  SunIcon,
 } from "./Icons";
 import { motion } from "framer-motion";
-import {FaXTwitter} from "react-icons/fa6"
+import { FaXTwitter } from "react-icons/fa6";
+import { AiFillGithub } from "react-icons/ai";
+import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -19,7 +21,7 @@ const CustomLink = ({ href, title, className = "" }) => {
     <Link href={href} className={`${className} relative group`}>
       {title}
       <span
-        className={`h-[1px] inline-block w-full bg-dark absolute left-0 -bottom-0.5 scale-x-0
+        className={`h-[1px] inline-block w-full bg-[--dark] absolute left-0 -bottom-0.5 scale-x-0
       group-hover:scale-x-100 transition-[transform] ease duration-300 origin-center
       ${router.asPath === href ? "scale-x-100" : "scale-x-0"}
       `}
@@ -31,9 +33,11 @@ const CustomLink = ({ href, title, className = "" }) => {
 };
 
 const Navbar = () => {
+  const [theme, setTheme] = useThemeSwitcher();
+  
   return (
     <div>
-      <header className="w-full px-32 py-8 font-medium flex items-center justify-between z-20">
+      <header className="w-full px-32 py-8 font-medium flex items-center justify-between z-20 text-[--dark]">
         <nav>
           <CustomLink href="/" title="Home" className="mr-4 z-20" />
           <CustomLink href="/about" title="About" className="mx-4 z-20" />
@@ -45,7 +49,7 @@ const Navbar = () => {
           <motion.a
             href="https://twitter.com"
             target={"_blank"}
-            className="w-6 mr-3 m-6 "
+            className="w-6 mr-3 m-6 text-[--dark] "
             whileHover={{ y: -5 }}
             transition={{
               type: "spring",
@@ -60,7 +64,7 @@ const Navbar = () => {
           <motion.a
             href="https://twitter.com"
             target={"_blank"}
-            className="w-6 mx-3 m-6 "
+            className="w-6 mx-3 m-6 text-[--dark] "
             whileHover={{ y: -5 }}
             transition={{
               type: "spring",
@@ -70,12 +74,12 @@ const Navbar = () => {
             }}
             whileTap={{ scale: 0.9 }}
           >
-            <GithubIcon />
+            <AiFillGithub className="text-[1.5rem]" />
           </motion.a>
           <motion.a
             href="https://twitter.com"
             target={"_blank"}
-            className="w-6 mx-3 m-6 "
+            className="w-6 mx-3 m-6 text-[--dark] "
             whileHover={{ y: -5 }}
             transition={{
               type: "spring",
@@ -90,7 +94,7 @@ const Navbar = () => {
           <motion.a
             href="https://twitter.com"
             target={"_blank"}
-            className="w-6 mx-3 m-6 "
+            className="w-6 mx-3 m-6 text-[--dark] "
             whileHover={{ y: -5 }}
             transition={{
               type: "spring",
@@ -105,7 +109,7 @@ const Navbar = () => {
           <motion.a
             href="https://twitter.com"
             target={"_blank"}
-            className="w-6 mx-3 m-6 "
+            className="w-6 mx-3 m-6 text-[--dark] "
             whileHover={{ y: -5 }}
             transition={{
               type: "spring",
@@ -117,6 +121,16 @@ const Navbar = () => {
           >
             <DribbbleIcon />
           </motion.a>
+        <button
+          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+          className="ml-3 flex items-center justify-center rounded-full p-2 theme-switch bg-[--dark] fill-[--dark] text-[--light]"
+        >
+          {theme === "dark" ? (
+            <SunIcon className={`fill-[--dark]`} />
+          ) : (
+            <MoonIcon className={`fill-[--dark]`} />
+          )}
+        </button>
         </nav>
 
         <div className="absolute left-[50%]  translate-x-[-50%]">

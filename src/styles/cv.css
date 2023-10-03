@@ -27,6 +27,7 @@
   position: relative;
   box-shadow: 2px 0px 2px 0px rgba(0, 0, 0, 0.19),
     -2px 0px 2px 0px rgba(0, 0, 0, 0.19);
+  transform-style: preserve-3d;
 }
 
 .cv1 {
@@ -37,6 +38,7 @@
   transition: all 0.2s linear;
   box-shadow: -2px 0px 2px 0px rgba(0, 0, 0, 0.19),
     2px 0px 2px 0px rgba(0, 0, 0, 0.19), 0px -10px -10px 0px #00000030;
+  transform-style: preserve-3d;
 }
 
 .cv3 {
@@ -45,6 +47,7 @@
   position: relative;
   box-shadow: #00000030 0px 10px 10px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   transition: all 0.2s linear;
+  transform-style: preserve-3d;
 }
 button .roundedButton {
   padding: 10px 0;
@@ -54,4 +57,6 @@ button .roundedButton:hover {
   outline: none;
   border: none;
 }
-
+button .roundedButton:hover span{
+  color: #ffff;
+}

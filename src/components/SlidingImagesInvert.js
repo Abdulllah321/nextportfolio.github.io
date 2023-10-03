@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "@/styles/SlidingImages.module.css";
-import { useRef, useLayoutEffect } from "react";
+import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { motion } from "framer-motion";
@@ -23,7 +23,7 @@ export default function SlidingImagesInvert() {
   let xPercent = 0;
   let direction = -1;
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(slider.current, {
@@ -74,9 +74,7 @@ export default function SlidingImagesInvert() {
               <Image
                 className={styles.video}
                 src={waveCafeUrl}
-                autoPlay
-                loop
-                muted
+                alt="wave-cafe"
               />
             </div>
           </Link>
@@ -87,9 +85,7 @@ export default function SlidingImagesInvert() {
               <Image
                 className={styles.video}
                 src={waveCafeUrl}
-                autoPlay
-                loop
-                muted
+                alt="wave-cafe"
               />
             </div>
           </Link>
@@ -100,9 +96,7 @@ export default function SlidingImagesInvert() {
               <Image
                 className={styles.video}
                 src={waveCafeUrl}
-                autoPlay
-                loop
-                muted
+                alt="wave-cafe"
               />
             </div>
           </Link>
@@ -113,9 +107,7 @@ export default function SlidingImagesInvert() {
               <Image
                 className={styles.video}
                 src={waveCafeUrl}
-                autoPlay
-                loop
-                muted
+                alt="wave-cafe"
               />
             </div>
           </Link>
@@ -126,9 +118,7 @@ export default function SlidingImagesInvert() {
               <Image
                 className={styles.video}
                 src={waveCafeUrl}
-                autoPlay
-                loop
-                muted
+                alt="wave-cafe"
               />
             </div>
           </Link>
@@ -139,9 +129,7 @@ export default function SlidingImagesInvert() {
               <Image
                 className={styles.video}
                 src={waveCafeUrl}
-                autoPlay
-                loop
-                muted
+                alt="wave-cafe"
               />
             </div>
           </Link>
@@ -152,9 +140,7 @@ export default function SlidingImagesInvert() {
               <Image
                 className={styles.video}
                 src={waveCafeUrl}
-                autoPlay
-                loop
-                muted
+                alt="wave-cafe"
               />
             </div>
           </Link>
@@ -165,9 +151,7 @@ export default function SlidingImagesInvert() {
               <Image
                 className={styles.video}
                 src={waveCafeUrl}
-                autoPlay
-                loop
-                muted
+                alt="wave-cafe"
               />
             </div>
           </Link>
@@ -178,9 +162,7 @@ export default function SlidingImagesInvert() {
               <Image
                 className={styles.video}
                 src={waveCafeUrl}
-                autoPlay
-                loop
-                muted
+                alt="wave-cafe"
               />
             </div>
           </Link>
@@ -191,9 +173,7 @@ export default function SlidingImagesInvert() {
               <Image
                 className={styles.video}
                 src={waveCafeUrl}
-                autoPlay
-                loop
-                muted
+                alt="wave-cafe"
               />
             </div>
           </Link>

@@ -2,6 +2,7 @@ import { useRef } from "react";
 import React from "react";
 import { useScroll, motion } from "framer-motion";
 import LiIcon from "./LiIcon";
+import AnimatedText from "./AnimatedText";
 
 const Details = ({
   position,
@@ -32,16 +33,16 @@ const Details = ({
           once:true
         }}
       >
-        <h3 className="capitalize font-bold text-2xl">
+        <h3 className="capitalize font-bold text-2xl text-[--dark]">
           {position}&nbsp;
-          <a href={companyLink} target="_blank" className="text-primary">
+          <a href={companyLink} target="_blank" className="text-[--primary]">
             @{company}
           </a>
         </h3>
-        <span className="capitalize font-medium text-dark/75">
+        <span className="capitalize font-medium text-[--grey]">
           {time} | {address}
         </span>
-        <p className="font-medium w-full">
+        <p className="font-medium w-full text-[--dark]">
           {work}
           <br />
           <b>Note:</b>
@@ -62,14 +63,12 @@ const Experience = () => {
 
   return (
     <div className="my-64">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center">
-        Experience
-      </h2>
+   <AnimatedText text={`Experience`} className="pb-32"/>
 
       <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-[1.5px] w-[4px] h-full bg-dark origin-top rounded-full"
+          className="absolute left-9 top-[1.5px] w-[4px] h-full bg-[--dark] origin-top rounded-full"
         />
 
         <ul className="w-full flex flex-col items-start justify-between ml-4">

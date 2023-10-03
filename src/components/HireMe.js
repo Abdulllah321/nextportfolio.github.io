@@ -94,11 +94,11 @@ const HireMe = () => {
           animate="animate"
           transition="transition"
         >
-          <CircularText className={`fill-dark`} />
+          <CircularText className={`fill-[--dark]`} />
         </motion.div>
         <Link
-          href="mailto:abdullahsufyan2007@gmail.com"
-          className="flex items-center justify-center text-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark text-light shadow-md border-2 transition-all duration-300 ease-in-out border-solid border-dark w-[4.5rem] h-[4.5rem] rounded-full font-semibold hover:bg-light hover:text-dark text-[.9rem] p-1"
+          href="/contact"
+          className="flex items-center justify-center text-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[--dark] text-[--light] shadow-md border-2 transition-all duration-300 ease-in-out border-solid border-[--dark] w-[4.5rem] h-[4.5rem] rounded-full font-semibold hover:bg-[--light] hover:text-[--dark] text-[.9rem] p-1"
         >
           Hire Me
         </Link>

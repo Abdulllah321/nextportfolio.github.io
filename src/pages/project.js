@@ -8,7 +8,6 @@ import Button from "@/components/Button";
 import { LinkArrow } from "@/components/Icons";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { projectVideos } from "@/components/Constants";
-import TransitionEffect from "@/components/TransitionEffect";
 import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
 

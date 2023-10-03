@@ -1,11 +1,11 @@
 import Link from "next/link";
-import Image from "next/image";
 import styles from "@/styles/SlidingImages.module.css";
-import { useRef, useLayoutEffect } from "react";
+import Image from "next/image";
+import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { motion } from "framer-motion";
-import waveCafeUrl from "@/components/assets/project/wavecafe.png"
+import waveCafeUrl from "@/components/assets/project/wavecafe.png";
 
 export default function SlidingImages() {
   const firstProject = useRef(null);
@@ -23,7 +23,8 @@ export default function SlidingImages() {
   let xPercent = 0;
   let direction = -1;
 
-  useLayoutEffect(() => {
+useEffect(() => {
+  if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(slider.current, {
@@ -40,7 +41,8 @@ export default function SlidingImages() {
     });
 
     requestAnimationFrame(animate);
-  }, []);
+  }
+}, []);
 
   const animate = () => {
     if (xPercent < -100) {
@@ -62,7 +64,7 @@ export default function SlidingImages() {
 
     requestAnimationFrame(animate);
 
-    xPercent += .5 * direction;
+    xPercent += 0.5 * direction;
   };
 
   return (
@@ -74,9 +76,7 @@ export default function SlidingImages() {
               <Image
                 className={styles.video}
                 src={waveCafeUrl}
-                autoPlay
-                loop
-                muted
+                alt="waveCafe"
               />
             </div>
           </Link>
@@ -87,9 +87,7 @@ export default function SlidingImages() {
               <Image
                 className={styles.video}
                 src={waveCafeUrl}
-                autoPlay
-                loop
-                muted
+                alt="waveCafe"
               />
             </div>
           </Link>
@@ -100,9 +98,7 @@ export default function SlidingImages() {
               <Image
                 className={styles.video}
                 src={waveCafeUrl}
-                autoPlay
-                loop
-                muted
+                alt="waveCafe"
               />
             </div>
           </Link>
@@ -113,9 +109,7 @@ export default function SlidingImages() {
               <Image
                 className={styles.video}
                 src={waveCafeUrl}
-                autoPlay
-                loop
-                muted
+                alt="waveCafe"
               />
             </div>
           </Link>
@@ -126,9 +120,7 @@ export default function SlidingImages() {
               <Image
                 className={styles.video}
                 src={waveCafeUrl}
-                autoPlay
-                loop
-                muted
+                alt="waveCafe"
               />
             </div>
           </Link>
@@ -139,9 +131,7 @@ export default function SlidingImages() {
               <Image
                 className={styles.video}
                 src={waveCafeUrl}
-                autoPlay
-                loop
-                muted
+                alt="waveCafe"
               />
             </div>
           </Link>
@@ -152,9 +142,7 @@ export default function SlidingImages() {
               <Image
                 className={styles.video}
                 src={waveCafeUrl}
-                autoPlay
-                loop
-                muted
+                alt="waveCafe"
               />
             </div>
           </Link>
@@ -165,9 +153,7 @@ export default function SlidingImages() {
               <Image
                 className={styles.video}
                 src={waveCafeUrl}
-                autoPlay
-                loop
-                muted
+                alt="waveCafe"
               />
             </div>
           </Link>
@@ -178,9 +164,7 @@ export default function SlidingImages() {
               <Image
                 className={styles.video}
                 src={waveCafeUrl}
-                autoPlay
-                loop
-                muted
+                alt="waveCafe"
               />
             </div>
           </Link>
@@ -191,9 +175,7 @@ export default function SlidingImages() {
               <Image
                 className={styles.video}
                 src={waveCafeUrl}
-                autoPlay
-                loop
-                muted
+                alt="waveCafe"
               />
             </div>
           </Link>
@@ -201,4 +183,4 @@ export default function SlidingImages() {
       </div>
     </motion.div>
   );
-} 
+}
