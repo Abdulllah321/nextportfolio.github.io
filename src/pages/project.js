@@ -9,6 +9,8 @@ import { LinkArrow } from "@/components/Icons";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { projectVideos } from "@/components/Constants";
 import TransitionEffect from "@/components/TransitionEffect";
+import Layout from "@/components/Layout";
+import AnimatedText from "@/components/AnimatedText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,7 +44,12 @@ const Projects = () => {
           ".project_liveProject__Zcjly"
         );
         if (liveProjectElement) {
-          gsap.to(liveProjectElement, { top: 0, duration: 0.5, zIndex:2, opacity:1 });
+          gsap.to(liveProjectElement, {
+            top: 0,
+            duration: 0.5,
+            zIndex: 2,
+            opacity: 1,
+          });
         }
       };
 
@@ -52,50 +59,55 @@ const Projects = () => {
 
   return (
     <>
-    <TransitionEffect/>
       <Head>
         <title>Abdullah || Project page</title>
         <meta name="description" content="mydescription" />
       </Head>
-      <main className={`${styles.main} slidersOfImages`}>
-        {projectVideos.map((projectVideo, index) => (
-          <div key={projectVideo.id} className={styles.mainProject}>
-            <div className={styles.videos}>
-              <div className={styles.laptop}>
-                <video ref={laptopVideoRefsArray[index]} autoPlay muted>
-                  <source src={projectVideo.laptop} type="video/mp4" />
-                </video>
-                <motion.div
-                  ref={(ref) =>
-                    (projectVideoRefs.current[projectVideo.id] = ref)
-                  }
-                  className={styles.projectVideo}
-                  initial={{ opacity: 0 }}
-                >
-                  <video autoPlay loop muted>
-                    <source src={projectVideo.src} type={projectVideo.type} />
+      <Layout className="p-0 pt-0 ">
+         <AnimatedText
+            text="Projects"
+            className="text-[5.5rem] my-16"
+          />
+        <main className={`${styles.main} slidersOfImages`}>
+          {projectVideos.map((projectVideo, index) => (
+            <div key={projectVideo.id} className={styles.mainProject}>
+              <div className={styles.videos}>
+                <div className={styles.laptop}>
+                  <video ref={laptopVideoRefsArray[index]} autoPlay muted>
+                    <source src={projectVideo.laptop} type="video/mp4" />
                   </video>
-                </motion.div>
-              </div>
-            </div>
-            <div className={styles.liveProject}>
-              <div className={styles.texts}>
-                <div className={styles.title}>{projectVideo.title}</div>
-                <div className={styles.description}>
-                  {projectVideo.description}
+                  <motion.div
+                    ref={(ref) =>
+                      (projectVideoRefs.current[projectVideo.id] = ref)
+                    }
+                    className={styles.projectVideo}
+                    initial={{ opacity: 0 }}
+                  >
+                    <video autoPlay loop muted>
+                      <source src={projectVideo.src} type={projectVideo.type} />
+                    </video>
+                  </motion.div>
                 </div>
               </div>
-              <div className={styles.button}>
-                <Button>
-                  <Link href={projectVideo.href} target="blank">
-                    Live Project <LinkArrow className={styles.svg} />
-                  </Link>
-                </Button>
+              <div className={styles.liveProject}>
+                <div className={styles.texts}>
+                  <div className={styles.title}>{projectVideo.title}</div>
+                  <div className={styles.description}>
+                    {projectVideo.description}
+                  </div>
+                </div>
+                <div className={styles.button}>
+                  <Button>
+                    <Link href={projectVideo.href} target="blank">
+                      Live Project <LinkArrow className={styles.svg} />
+                    </Link>
+                  </Button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </main>
+          ))}
+        </main>
+      </Layout>
     </>
   );
 };

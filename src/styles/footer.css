@@ -5,6 +5,7 @@ footer.footer {
   height: 100vh;
   background: var(--primary);
   color: var(--light);
+  z-index: 1;
 }
 
 footer .footerButton {

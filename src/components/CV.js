@@ -223,7 +223,7 @@ const CV = () => {
   }, []);
   return (
     <div className="cv-main">
-      <div className="w-3/4 cv m-auto my-48 relative" ref={cvRef}>
+      <div className="w-3/4 cv m-auto relative" ref={cvRef}>
         <div className="overlay" />
         <Image src={CV1} className="cv1" alt="cv" />
         <Image src={CV2} className="cv2" alt="cv" />

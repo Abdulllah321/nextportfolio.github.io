@@ -35,7 +35,9 @@ const Cursor = () => {
       }, 700);
     });
 
-    const links = document.querySelectorAll("a, .project_projectVideo__Scvvx");
+    const links = document.querySelectorAll(
+      "a, .project_projectVideo__Scvvx, input, .style_nav__I2WqP, .style_headerButtonContainer__LMJxd"
+    );
 
     links.forEach((link) => {
       link.addEventListener("mouseenter", () => {

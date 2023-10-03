@@ -22,8 +22,8 @@ export default function index() {
     gsap.to(button.current, {
       scrollTrigger: {
         trigger: document.documentElement,
-        start: 0,
-        end: window.innerHeight,
+        start: "30% center", 
+        end: "10% top",
         onLeave: () => {
           gsap.to(button.current, {
             scale: 1,
@@ -34,7 +34,11 @@ export default function index() {
         onEnterBack: () => {
           gsap.to(
             button.current,
-            { scale: 0, duration: 0.25, ease: "power1.out" },
+            {
+              scale: 0,
+              duration: 0.25,
+              ease: "power1.out",
+            },
             setIsActive(false)
           );
         },

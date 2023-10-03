@@ -1,0 +1,124 @@
+.box {
+  width: 100%;
+  position: relative;
+  border: none;
+  border-bottom: 1px solid var(--dark);
+  padding: 50px 30px;
+
+  .question {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+  }
+
+  .inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+
+    .input {
+      border: 2px solid var(--dark);
+      padding: 15px 15px;
+      width: 100%;
+      position: absolute;
+      font-size: 1.3rem;
+      line-height: 20px;
+      background: transparent;
+      transition: 0.2s ease;
+      z-index: 12;
+      border-radius: 0.5rem;
+    }
+
+    .icon {
+      position: absolute;
+      color: var(--dark);
+      font-size: 2rem;
+      right: 0;
+      padding: 5px 10px;
+      border-left: 1px solid var(--dark);
+    }
+
+    .span {
+      position: absolute;
+      font-size: 1rem;
+      color: #888;
+      padding: 0 20px;
+      background: var(--light);
+      transition: 0.3s ease;
+      display: flex;
+      align-items: center;
+
+      .exp {
+        font-size: 0.8rem;
+        padding-left: 0.5rem;
+        transition: all 0.5s ease;
+      }
+    }
+  }
+
+  .input:focus,
+  .input:valid {
+    outline: none;
+    border: 3px solid var(--dark);
+  }
+  .input:focus + .span .exp,
+  .input:valid + .span .exp {
+    display: none;
+  }
+
+  .input:focus + .span,
+  .input:valid + .span {
+    color: var(--dark);
+    height: 30px;
+    line-height: 30px;
+    transform: translate(5px, -27px) scale(0.88);
+    border-radius: 1rem;
+    z-index: 15;
+    text-transform: capitalize;
+    font-weight: bolder;
+  }
+}
+.box:first-child {
+  border-top: 1px solid var(--dark);
+  margin-top: 2rem;
+}
+
+.mainButton {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 100;
+
+  .buttonWrapper {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    // border: 1px solid #000;
+    // overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  .button{
+    width: 150px;
+    height: 150px;
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0%;
+    transition-duration: 300ms;
+    transition-timing-function: ease-out;
+  }
+}
+.line{
+  width: 100%;
+  height: 1px;
+  background: grey;
+  position: absolute;
+}

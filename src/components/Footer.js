@@ -11,10 +11,9 @@ const Footer = () => {
 
   useEffect(() => {
     gsap.set(".footer-container", {
-      yPercent: -70,
-      zIndex: -3,
+      yPercent: -50,
       opacity: 0,
-    })
+    });
 
     const uncover = gsap.timeline({ paused: true });
 
@@ -22,7 +21,6 @@ const Footer = () => {
       yPercent: 0,
       ease: "none",
       opacity: 1,
-      zIndex: 3,
     });
 
     ScrollTrigger.create({

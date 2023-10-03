@@ -36,19 +36,18 @@ const AnimatedNumbers = ({ value }) => {
 const about = () => {
   return (
     <>
-    <TransitionEffect/>
       <Head>
         <title>Abdullah || About page</title>
         <meta name="description" content="mydescription" />
       </Head>
       
       <main className="flex w-full flex-col items-center justify-center bg-dark">
-        <Layout className="pt-16">
+        <Layout>
           <AnimatedText
             text="Passion Fuels Purpose!"
-            className="text-[5.5rem] mb-16"
+            className="text-[5.5rem] my-16"
           />
-          <div className="grid w-full grid-cols-8 gap-16">
+          <div className="grid w-full grid-cols-8 gap-16 p-32">
             <div className="col-span-3 flex flex-col items-start justify-start">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/075 ">
                 Biography

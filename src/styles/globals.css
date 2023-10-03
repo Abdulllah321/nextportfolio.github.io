@@ -100,7 +100,7 @@ body {
   border-radius: 50%;
   height: 7rem;
   width: 7rem;
-  background: radial-gradient(circle at 100px 80px, #f5f5f5, #3a6073);
+  background: radial-gradient(circle at 100px 80px, var(--light), #3a6073);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,8 +112,8 @@ body {
 .toggle {
   background: radial-gradient(circle, #3a6073, #16222a);
   cursor: pointer;
-  border: 2px solid #f5f5f5;
-  color: #f5f5f5;
+  border: 2px solid var(--light);
+  color: var(--light);
   height: 130px;
   width: 130px;
   text-align: center;
@@ -151,7 +151,7 @@ body {
   transition: color 0.4s linear;
 }
 .roundedButton:hover span {
-  color: white;
+  color: var(--light);
 }
 .circle {
   width: 100%;
@@ -317,14 +317,22 @@ body {
   border-radius: 100px;
 }
 .slidersOfImages {
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 10%;
   width: 100vw;
+  z-index: 200;
+  background: var(--light);
+}
+
+.slidersOfImages.max-w-screen-xl {
+  padding-top: 0;
+  height: auto;
   z-index: 100;
+  /* background: var(--light); */
 }
 
 /* project */
-.project_button__fYte6 .roundedButton{
+.project_button__fYte6 .roundedButton {
   padding: 1rem;
 }
 .project_button__fYte6 .roundedButton .circle {
@@ -339,6 +347,14 @@ body {
     rotate: -360deg;
   }
 }
+@keyframes rotates {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
 .project_button__fYte6 .roundedButton span a {
   display: flex;
 }
@@ -346,3 +362,11 @@ body {
   height: auto;
   padding-top: 0%;
 }
+
+/* Contact */
+.Contact_button__Y1MHX .roundedButton {
+  background: var(--dark);
+  transition: 0.5s all cubic-bezier(0.19, 1, 0.22, 1);
+  color: var(--light);
+}
+

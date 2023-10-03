@@ -6,6 +6,7 @@ import { menuSlide } from "../animation";
 import Link from "./Link";
 import Curve from "./Curve";
 import Footer from "./Footer";
+import MagneticButton from "@/components/MagneticButton";
 
 const navItems = [
   {
@@ -46,18 +47,18 @@ export default function index() {
           className={styles.nav}
         >
           <div className={styles.header}>
-            <p>Navigation</p>
+            <p className="my-4">Navigation</p>
           </div>
-          {navItems.map((data, index) => {
-            return (
-              <Link
-                key={index}
-                data={{ ...data, index }}
-                isActive={selectedIndicator == data.href}
-                setSelectedIndicator={setSelectedIndicator}
-              ></Link>
-            );
-          })}
+            {navItems.map((data, index) => {
+              return (
+                <Link
+                  key={index}
+                  data={{ ...data, index }}
+                  isActive={selectedIndicator == data.href}
+                  setSelectedIndicator={setSelectedIndicator}
+                ></Link>
+              );
+            })}
         </div>
         <Footer />
       </div>
