@@ -1,17 +1,17 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index.js", // Update with your entry file path
+  entry: "./src/_app.js", // Update with your entry file path
   output: {
     path: path.resolve(__dirname, "dist"), // Update with your output directory path
-    filename: "bundle.js", // Update with your output bundle file name
+    filename: "project.js", // Update with your output bundle file name
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: "babel-loader", // Add any additional loaders you need for JavaScript files
+        use: "babel-loader", 
       },
       {
         test: /\.webm$/,
