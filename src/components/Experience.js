@@ -18,7 +18,7 @@ const Details = ({
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] overflow-hidden mx-auto flex flex-col items-center justify-between"
+      className="my-8 first:mt-0 last:mb-0 w-[80%] overflow-hidden mx-auto flex flex-col items-center justify-between"
     >
       <LiIcon references={ref} />
       <motion.div
@@ -62,10 +62,10 @@ const Experience = () => {
   });
 
   return (
-    <div className="my-64">
+    <div className="my-64 max-w-[1280px] m-auto ">
    <AnimatedText text={`Experience`} className="pb-32"/>
 
-      <div ref={ref} className="w-[75%] mx-auto relative">
+      <div ref={ref} className="w-[90%] mx-auto relative">
         <motion.div
           style={{ scaleY: scrollYProgress }}
           className="absolute left-9 top-[1.5px] w-[4px] h-full bg-[--dark] origin-top rounded-full"

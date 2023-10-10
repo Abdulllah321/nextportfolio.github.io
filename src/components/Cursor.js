@@ -79,7 +79,7 @@ const Cursor = () => {
   return (
     <div>
       {/* Wrap your content in a container */}
-      <div className="cursor-container">
+      <div className="cursor-container lg:hidden">
         <motion.div className="cursor">
           {/* Add a ::after pseudo-element */}
           <div className="cursor-after"></div>

@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from "react";
+"use-client";
+import React, { useEffect, useRef, useState } from "react";
 import CV1 from "./assets/cv/image_part_001.png";
 import CV2 from "./assets/cv/image_part_002.png";
 import CV3 from "./assets/cv/image_part_003.png";
@@ -13,9 +14,21 @@ import Link from "next/link";
 
 const CV = () => {
   const cvRef = useRef(null);
+  const [xl, setXl] = useState(false);
+  const [lg, setLg] = useState(false);
+  const [md, setMd] = useState(false);
+  const [sm, setSm] = useState(false);
+  const [xs, setXs] = useState(false);
+
   // const profileTimeline = useRef(null);
 
   useEffect(() => {
+    const xl = 1280;
+    const lg = 1024;
+    const md = 768;
+    const sm = 640;
+    const xs = 480;
+
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(".cv1", {
@@ -25,45 +38,54 @@ const CV = () => {
       borderRadius: "0 0 1rem 1rem",
     });
 
-    // Other animations triggered by scrolling
-    gsap.from(".cv2", {
-      rotateX: -90,
-      transformOrigin: "top",
-    });
-    gsap.to(".cv2", {
-      rotateX: 0,
-      transformOrigin: "top top",
-      duration: 1,
-      ease: "power3",
-      scrollTrigger: {
-        trigger: ".cv",
-        start: "20% 60%",
-        end: "50% 20%",
-        scrub: true,
-        // markers:true
-      },
-    });
+    if (window.innerWidth > lg) {
+      gsap.from(".cv2", {
+        rotateX: -90,
+        transformOrigin: "top",
+      });
+      gsap.to(".cv2", {
+        rotateX: 0,
+        transformOrigin: "top top",
+        duration: 1,
+        ease: "power3",
+        scrollTrigger: {
+          trigger: ".cv",
+          start: "20% 70%",
+          end: "50% 20%",
+          scrub: true,
+          // markers:true
+        },
+      });
 
-    gsap.from(".cv3", {
-      rotateX: -90,
-      transformOrigin: "top",
-    });
-    gsap.to(".cv3", {
-      rotateX: 0,
-      transformOrigin: "top top",
-      duration: 1,
-      ease: "power3",
-      scrollTrigger: {
-        trigger: ".cv",
-        start: "50.33% 60%",
-        end: "center 30%",
-        scrub: true,
-        // markers: true,
-      },
-    });
+      gsap.from(".cv3", {
+        rotateX: -90,
+        transformOrigin: "top",
+      });
+      gsap.to(".cv3", {
+        rotateX: 0,
+        transformOrigin: "top top",
+        duration: 1,
+        ease: "power3",
+        scrollTrigger: {
+          trigger: ".cv",
+          start: "50.33% 70%",
+          end: "center 30%",
+          scrub: true,
+          // markers: true,
+        },
+      });
+    }
 
     gsap.to(cvRef.current, {
-      width: "30%",
+      width:
+        window.innerWidth > lg
+          ? "40%"
+          : window.innerWidth > md
+          ? "80%"
+          : window.innerWidth > sm
+          ? "90%" 
+          :window.innerWidth < sm ? "100%"
+          : "",
       scrollTrigger: {
         trigger: ".cv",
         start: "top 60%",
@@ -74,10 +96,11 @@ const CV = () => {
 
     gsap.to(".cv", {
       position: "sticky",
-      top: "25%",
+      top: window.innerWidth > lg ? "25%" : window.innerWidth < lg ? "25%" : "10%" ,
+       y: window.innerWidth < lg ? "-25%" : "" ,
       scrollTrigger: {
         trigger: ".cv-main",
-        start: "top top",
+        start: window.innerWidth > lg ? "top top" : "top 20%",
         end: "bottom bottom",
         scrub: true,
       },
@@ -165,8 +188,8 @@ const CV = () => {
       opacity: 1,
       scrollTrigger: {
         trigger: ".cv",
-        start: "10% top",
-        end: "bottom bottom",
+        start: window.innerWidth < lg ? "top top" : "top 10%",
+        end: window.innerWidth < lg ? "80% bottom" : "bottom bottom",
         scrub: 1,
       },
     });
@@ -193,9 +216,10 @@ const CV = () => {
       duration: 2,
       scrollTrigger: {
         trigger: ".cv-main",
-        start: "50% 80%", // Adjust this start point as needed
-        end: "60% bottom",
+        start: window.innerWidth < lg ? "60% 80%" : "70% bottom",
+        end: window.innerWidth < lg ? "80% bottom" : "60% bottom",
         scrub: 1,
+        // markers: true,
       },
     });
     gsap.to(".cvDetails p", {
@@ -204,7 +228,7 @@ const CV = () => {
       duration: 2,
       scrollTrigger: {
         trigger: ".cv-main",
-        start: "70% 80%", // Adjust this start point as needed
+        start: "70% 80%",
         end: "80% bottom",
         scrub: 1,
       },
@@ -222,12 +246,12 @@ const CV = () => {
     });
   }, []);
   return (
-    <div className="cv-main">
-      <div className="w-3/4 cv m-auto relative" ref={cvRef}>
+    <div className="cv-main max-w-[1280px] m-auto 2xl:p-10 lg:p-12 xl:p-20 md:p-10 sm:p-8">
+      <div className="w-3/4 md:w-full cv m-auto relative" ref={cvRef}>
         <div className="overlay" />
-        <Image src={CV1} className="cv1" alt="cv" />
-        <Image src={CV2} className="cv2" alt="cv" />
-        <Image src={CV3} className="cv3" alt="cv" />
+        <Image src={CV1} className="cv1" alt="cv" priority />
+        <Image src={CV2} className="cv2" alt="cv" priority />
+        <Image src={CV3} className="cv3" alt="cv" priority />
         {/*<div className="profileCard absolute top-0 flex items-center justify-between z-20 w-full h-full flex-col">
           <Image
             src={ProfileImage}
@@ -241,19 +265,20 @@ const CV = () => {
           </div> 
         </div>*/}
         <div className="absolute top-0 w-full h-full m-auto text-center z-30 flex items-center justify-center flex-col cvDetails p-4">
-          <h1 className="text-light text-[40px] mb-6 font-bold ">
+          <h1 className="text-light text-[3rem] mb-6 font-bold xs:text-[2rem] ">
             Abdullah Sufyan
           </h1>
-          <p className="text-light text-left ml-3 ">
-            I'm a web developer with a knack for creating all sorts of websites,
-            both the front-end, which is what you see and interact with, and the
-            back-end, the behind-the-scenes magic that makes websites work. I
-            really enjoy making websites that are not just functional but also
-            look super cool with animations and stuff. If you ever need a
-            website, whether it's for your business or a personal project, I'm
-            your go-to person. I'll make sure your website looks awesome and
-            works like a charm. Just drop me a message, and we can work together
-            to bring your website dreams to life!
+          <p className="text-light text-left ml-3 xs:line-clamp-[10] ">
+            I&apos;m a web developer with a knack for creating all sorts of
+            websites, both the front-end, which is what you see and interact
+            with, and the back-end, the behind-the-scenes magic that makes
+            websites work. I really enjoy making websites that are not just
+            functional but also look super cool with animations and stuff. If
+            you ever need a website, whether it&apos;s for your business or a
+            personal project, I&apos;m your go-to person. I&apos;ll make sure your
+            website looks awesome and works like a charm. Just drop me a
+            message, and we can work together to bring your website dreams to
+            life!
           </p>
           <button className="w-3/4 mt-4 mx-4">
             <Link href="/resume.pdf" target={"_blank"} download={true}>

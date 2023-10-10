@@ -17,13 +17,14 @@ import { FaXTwitter } from "react-icons/fa6";
 import { DribbbleIcon, LinkedInIcon, PinterestIcon } from "@/components/Icons";
 
 const Contact = () => {
-  const icons = [
-    <BiUser />,
-    <AiOutlineMail />,
-    <RiPhoneLine />,
-    <LuGlasses />,
-    <BiMessageAltDetail />,
-  ];
+const icons = [
+  <BiUser key="user-icon" />,
+  <AiOutlineMail key="mail-icon" />,
+  <RiPhoneLine key="phone-icon" />,
+  <LuGlasses key="glasses-icon" />,
+  <BiMessageAltDetail key="message-icon" />,
+];
+
 
   const exampleText = [
     "John Doe",
@@ -101,7 +102,7 @@ const Contact = () => {
       </Head>
       <Layout>
         <main className="my-32">
-          <div className="slidersOfImages max-w-screen-xl w-full flex m-auto">
+          <div className="slidersOfImages max-w-screen-xl w-full flex max-w-[1280px] m-auto ">
             <div className="w-[70%] relative">
               <AnimatedText
                 text={`Let's embark on our coding journey together!`}
@@ -132,7 +133,9 @@ const Contact = () => {
                     >{`What is Your ${question.label}?`}</div>
                     <div className={styles.inputBox}>
                       <input
-                        type={index === 1 ? "email"  :index === 2 ? "tel" : "text"}
+                        type={
+                          index === 1 ? "text" : index === 2 ? "tel" : "text"
+                        }
                         required="required"
                         className={styles.input}
                         autoComplete="off"
@@ -166,7 +169,6 @@ const Contact = () => {
                   src={profile}
                   alt="Abdullah"
                   priority
-                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 50vw"
                 />
               </div>
               <div className="w-full">
@@ -185,10 +187,7 @@ const Contact = () => {
                   Contact Details
                 </h1>
                 <MagneticButton>
-                  <a
-                    href={`mailto:abdullahsufyan2007@gmail.com`}
-                    target="_blank"
-                  >
+                  <a href={`mailto:abdullahsufyan2007@gmail.com`} target="_blank">
                     <h4
                       className={`flex mt-4 items-center text-start ${styles.h4}`}
                     >

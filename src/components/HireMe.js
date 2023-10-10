@@ -21,13 +21,15 @@ const HireMe = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+      window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    
   }, []);
 
+  
   const Hire = {
     initial: {
       opacity: 0,
@@ -47,8 +49,7 @@ const HireMe = () => {
         duration: 1,
         type: "spring",
         stiffness: 300,
-        damping:9,
-
+        damping: 9,
       },
     },
   };
@@ -79,31 +80,30 @@ const HireMe = () => {
 
   return (
     <MagneticButton>
-
-    <div className="fixed flex items-center justify-center bottom-4 left-4 z-50">
-      <motion.div
-        className="w-40 h-auto items-center justify-center relative"
-        initial="initial"
-        animate="animate"
-        transition="transition"
-        variants={Hire}
-      >
+      <div className="fixed flex items-center justify-center bottom-4 left-4 z-50 sm:right-0 sm:-top-1 sm:left-auto sm:bottom-auto sm:absolute">
         <motion.div
-          variants={circleVariant}
+          className="w-40 h-auto items-center justify-center relative sm:w-28 md:w-30 lg:w-35"
           initial="initial"
           animate="animate"
           transition="transition"
+          variants={Hire}
         >
-          <CircularText className={`fill-[--dark]`} />
+          <motion.div
+            variants={circleVariant}
+            initial="initial"
+            animate="animate"
+            transition="transition"
+          >
+            <CircularText className={`fill-[--dark]`} />
+          </motion.div>
+          <Link
+            href={`/contact`}
+            className="flex items-center justify-center text-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[--dark] text-[--light] shadow-md border-2 transition-all duration-300 ease-in-out border-solid border-[--dark] w-[4.5rem] h-[4.5rem] rounded-full font-semibold hover:bg-[--light] hover:text-[--dark] text-[.9rem] p-1 sm:w-[3.2rem] sm:h-[3.2rem] sm:text-[.6rem]"
+          >
+            Hire Me
+          </Link>
         </motion.div>
-        <Link
-          href="/contact"
-          className="flex items-center justify-center text-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[--dark] text-[--light] shadow-md border-2 transition-all duration-300 ease-in-out border-solid border-[--dark] w-[4.5rem] h-[4.5rem] rounded-full font-semibold hover:bg-[--light] hover:text-[--dark] text-[.9rem] p-1"
-        >
-          Hire Me
-        </Link>
-      </motion.div>
-    </div>
+      </div>
     </MagneticButton>
   );
 };

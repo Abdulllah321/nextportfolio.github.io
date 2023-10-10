@@ -48,7 +48,7 @@ export default function index() {
 
   return (
     <>
-      <div ref={button} className={`${styles.headerButtonContainer}`}>
+      <div ref={button} className={`${styles.headerButtonContainer} lg:hidden`}>
         <MagneticButton>
           <span
             onClick={() => {

@@ -63,11 +63,10 @@ const Projects = () => {
         <meta name="description" content="mydescription" />
       </Head>
       <Layout className="p-0 pt-0 ">
-         <AnimatedText
-            text="Projects"
-            className="text-[5.5rem] my-16"
-          />
-        <main className={`${styles.main} slidersOfImages`}>
+        <AnimatedText text="Projects" className="text-[5.5rem] my-16" />
+        <main
+          className={`${styles.main} slidersOfImages max-w-[1280px] transition transition-all duration-300 ease-out `}
+        >
           {projectVideos.map((projectVideo, index) => (
             <div key={projectVideo.id} className={styles.mainProject}>
               <div className={styles.videos}>

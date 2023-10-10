@@ -6,6 +6,7 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import PreLoader from "@/components/PreLoader";
 // import CurveSvg from "@/components/curveSvg";
 
 const montserrat = Montserrat({
@@ -14,20 +15,27 @@ const montserrat = Montserrat({
 });
 
 export default function App({ Component, pageProps }) {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
       const locomotiveScroll = new LocomotiveScroll();
+
+      setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.cursor = "default";
+        window.scrollTo(0, 0);
+      }, 2000);
     })();
   }, []);
 
   const pathname = usePathname();
   const [displayText, setDisplayText] = useState("Home");
+
   useEffect(() => {
     setDisplayText(pathname === "/" ? "Home" : pathname.replace("/", ""));
   }, [pathname]);
-
-  
 
   return (
     <>
@@ -37,47 +45,36 @@ export default function App({ Component, pageProps }) {
       </Head>
 
       <AnimatePresence mode="wait">
+        {isLoading && <PreLoader />}
         <motion.div
           className={`${montserrat.variable} font-mont bg-[--light] w-full min-h-screen`}
           key={pathname}
         >
           <Component {...pageProps} />
           <motion.div
-            className={`fixed top-0 bottom-0 bg-[--dark] w-screen h-screen z-[1000] flex justify-center items-center origin-top`}
-            initial={{ scaleY: 0 }}
-            animate={{ scaleY: 0 }}
-            exit={{ scaleY: 1 }}
-            transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
+            className={`fixed bg-[--dark] w-screen h-screen mx-auto z-[1000] flex justify-center items-center`}
+            initial={{ top: "-200%" }}
+            animate={{ top: "-200%" }}
+            exit={{ top: "0%" }}
+            transition={{ duration: 1.5, ease: [0.76, 0, 0.24, 1] }}
           >
             <div className="w-4 h-4 bg-[--light] rounded-full -left-4 relative" />
-            <motion.h1
-              className="text-[--light] text-8xl capitalize origin-right"
-              initial={{ left: 0 }}
-              animate={{ left: 0 }}
-              exit={{ left: "-100%" }}
-              transition={{ duration: 0.5 }}
-            >
+            <h1 className="text-[--light] text-8xl capitalize origin-right">
               {displayText}
-            </motion.h1>
+            </h1>
           </motion.div>
-          <motion.div
-            className={`fixed top-0 bottom-0 bg-[--dark] w-screen h-screen z-[1000] flex justify-center items-center origin-bottom`}
-            initial={{ scaleY: 1 }}
-            animate={{ scaleY: 0 }}
-            exit={{ scaleY: 0 }}
-            transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
-          >
-            <div className="w-4 h-4 bg-[--light] rounded-full -left-4 relative" />
-            <motion.h1
-              className="text-[--light] text-8xl capitalize"
-              initial={{ left: "-100%" }}
-              animate={{ left: 0 }}
-              exit={{ left: "100%" }}
-              transition={{ duration: 0.2 }}
+            <motion.div
+              className={`fixed bg-[--dark] w-screen h-screen mx-auto z-[1000] flex justify-center items-center`}
+              initial={{ top: "0" }}
+              animate={{ top: "200%" }}
+              exit={{ top: "200%" }}
+              transition={{ duration: 1.5, ease: [0.76, 0, 0.24, 1] }}
             >
-              {displayText}
-            </motion.h1>
-          </motion.div>
+              <div className="w-4 h-4 bg-[--light] rounded-full -left-4 relative" />
+              <h1 className="text-[--light] text-8xl capitalize">
+                {displayText}
+              </h1>
+            </motion.div>
         </motion.div>
       </AnimatePresence>
     </>

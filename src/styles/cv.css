@@ -2,7 +2,7 @@
   position: relative;
   top: 100%;
   width: 100%;
-  height: 300vh;
+  height: 250vh;
 }
 
 .cv {
@@ -59,4 +59,16 @@ button .roundedButton:hover {
 }
 button .roundedButton:hover span{
   color: #ffff;
+}
+
+@media only screen and (max-width: 1024px) {
+  .cv2{
+    transform: rotateX(0deg);
+  }
+  .cv3{
+    transform: rotateX(0deg);
+  }
+  .cv-main{
+      height: 150vh;
+  }
 }

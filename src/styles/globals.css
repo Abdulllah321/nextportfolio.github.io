@@ -6,30 +6,52 @@
   --dark: #1b1b1b;
   --light: #f5f5f5;
   --primary: #3a6073;
-  --primary-dark: #3498db ;
+  --primary-dark: #3498db;
   --grey: #808080;
   --darkLight: #1b1b1b60;
   --font-mont: "Montserrat", sans-serif;
 }
 
-.dark{
+.dark {
   --light: #1b1b1b;
   --dark: #f5f5f5;
   --primary-dark: #3a6073;
   --primary: #3498db;
   --grey: #808080;
-  --darkLight: #f5f5f560 ;
+  --darkLight: #f5f5f560;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--light);
+  user-select: none;
+}
 body {
-  width: calc(100vw - 2px);
+  width: 100vw;
+  height: 100%;
+  position: relative;
   overflow-x: hidden;
+  margin: auto;
+}
+
+.svg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc(100% + 300px);
+}
+
+.svg path {
+  fill: var(--light);
 }
 
 .cursor {
@@ -153,6 +175,10 @@ body {
   justify-content: center;
   color: #f5f5f5;
 }
+.toggle:focus {
+  background: radial-gradient(circle, var(--primary), #21323e);
+  color: #f5f5f5;
+}
 
 .roundedButton {
   border: 1px solid #888;
@@ -172,13 +198,12 @@ body {
   transition: color 0.4s linear;
 }
 .roundedButton:hover span {
-  color: var(--light);
+  color: #f5f5f5;
 }
 .circle {
   width: 100%;
   height: 150%;
   position: absolute;
-
   /* border-radius: 100%; */
 }
 
@@ -338,11 +363,10 @@ body {
   border-radius: 100px;
 }
 
-
 .slidersOfImages {
   min-height: 100vh;
   padding-top: 10%;
-  width: 100vw;
+  width: 100%;
   z-index: 200;
   background: var(--light);
 }
@@ -391,7 +415,7 @@ body {
   background: var(--dark);
   color: var(--light);
 }
-.Contact_button__Y1MHX .roundedButton:hover span{
+.Contact_button__Y1MHX .roundedButton:hover span {
   color: #f5f5f5;
 }
 

@@ -79,8 +79,8 @@ const Skills = () => {
   useEffect(() => {}, []);
 
   return (
-    <div className="w-full m-auto  p-0 relative">
-      <AnimatedText text={`Skills`} />
+    <div className="w-full m-auto  p-0 relative mt-[6rem] max-w-[1280px] ">
+      <AnimatedText text={`Skills`}  />
       <div
         className="w-full h-[50vh] relative flex items-center justify-center
       flex-col skill mt-40 p-0 m-0"

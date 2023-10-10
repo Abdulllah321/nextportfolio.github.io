@@ -31,7 +31,7 @@
       transition: 0.2s ease;
       z-index: 12;
       border-radius: 0.5rem;
-      color: var(--dark)
+      color: var(--dark);
     }
 
     .icon {
@@ -74,6 +74,7 @@
   .input:focus + .span,
   .input:valid + .span {
     color: var(--dark);
+
     height: 30px;
     line-height: 30px;
     transform: translate(10px, -31px) scale(0.88);
@@ -85,6 +86,7 @@
 }
 .box:first-child {
   border-top: 1px solid var(--dark);
+
   margin-top: 2rem;
 }
 
@@ -106,7 +108,7 @@
     display: flex;
     align-items: center;
   }
-  .button{
+  .button {
     width: 150px;
     height: 150px;
     z-index: 100;
@@ -118,13 +120,13 @@
     transition-timing-function: ease-out;
   }
 }
-.line{
+.line {
   width: 100%;
   height: 1px;
   background: var(--grey);
   position: absolute;
 }
-.after{
+.after {
   position: absolute;
   width: 30%;
   height: 30%;
@@ -134,13 +136,13 @@
   z-index: 1111111111;
 }
 
-.h4 span{
-  transition: all .5s ease;
+.h4 span {
+  transition: all 0.5s ease;
   position: relative;
   padding: 0;
   color: var(--dark);
 
-  &::after{
+  &::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -150,16 +152,14 @@
     border-radius: 1rem;
     transform-origin: center;
     transform: scaleX(0);
-    transition: .3s all ease-in-out;
+    transition: 0.3s all ease-in-out;
     left: 0;
   }
 
-  &:hover::after{
+  &:hover::after {
     transform: scaleX(1);
   }
-  
 }
-.an:hover .h4 span::after{
+.an:hover .h4 span::after {
   transform: scaleX(1);
-
 }

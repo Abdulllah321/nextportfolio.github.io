@@ -5,7 +5,8 @@ export default function MagneticButton({ children }) {
   const magnetic = useRef(null);
 
   useEffect(() => {
-    if (magnetic.current) {
+    // Check if the screen width is greater than 1024px
+    if (window.innerWidth > 1024 && magnetic.current) {
       const xTo = gsap.quickTo(magnetic.current, "x", {
         duration: 1,
         ease: "elastic",
