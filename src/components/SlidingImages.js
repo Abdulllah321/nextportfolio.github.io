@@ -60,6 +60,7 @@ export default function SlidingImages(transform) {
                   className={`${styles.video}`}
                   src={waveCafeUrl}
                   alt="waveCafe"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33.33vw"
                 />
               </div>
             </Link>

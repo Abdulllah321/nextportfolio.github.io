@@ -12,6 +12,7 @@ import {
 import { motion } from "framer-motion";
 import { FaXTwitter } from "react-icons/fa6";
 import { AiFillGithub } from "react-icons/ai";
+import { BsFacebook } from "react-icons/bs";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 import { useState } from "react";
 
@@ -69,9 +70,11 @@ const Navbar = () => {
 
   return (
     <div>
-      <header className="w-full 2xl:px-16 py-8 font-medium flex items-center justify-between z-20 text-[--dark] relative xl:px-8 lg:px-6 max-w-[1280px] mx-auto">
+      <header className="w-full 2xl:px-16 py-8 font-medium flex items-center justify-between z-[200] text-[--dark] relative xl:px-8 lg:px-6 max-w-[1280px] mx-auto ">
         <button
-          className={`flex-col justify-center items-center hidden lg:flex  ${isOpen ? "fixed" : "relative"}`}
+          className={`flex-col justify-center items-center hidden lg:flex  ${
+            isOpen ? "fixed" : "relative"
+          }`}
           onClick={handleClick}
         >
           <span
@@ -144,6 +147,21 @@ const Navbar = () => {
                 whileTap={{ scale: 0.9 }}
               >
                 <LinkedInIcon />
+              </motion.a>
+              <motion.a
+                href="https://twitter.com"
+                target={"_blank"}
+                className="w-6 mx-3 m-6 text-[--dark] "
+                whileHover={{ y: -5 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 150,
+                  damping: 15,
+                  mass: 0.1,
+                }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <BsFacebook className="text-[1.5rem]" />
               </motion.a>
               <motion.a
                 href="https://twitter.com"
@@ -254,6 +272,21 @@ const Navbar = () => {
                   whileTap={{ scale: 0.9 }}
                 >
                   <AiFillGithub className="text-[1.5rem]" />
+                </motion.a>
+                <motion.a
+                  href="https://twitter.com"
+                  target={"_blank"}
+                  className="w-6 mx-3 m-6 text-[--light] sm:mx-1 "
+                  whileHover={{ y: -5 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 150,
+                    damping: 15,
+                    mass: 0.1,
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <BsFacebook className="text-[1.5rem]" />
                 </motion.a>
                 <motion.a
                   href="https://twitter.com"

@@ -80,7 +80,10 @@ const Skills = () => {
 
   return (
     <div className="w-full m-auto  p-0 relative mt-[6rem] max-w-[1280px] ">
-      <AnimatedText text={`Skills`}  />
+      <AnimatedText
+        text={`Skills`}
+        className="text-[5rem] my-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:my-8 "
+      />
       <div
         className="w-full h-[50vh] relative flex items-center justify-center
       flex-col skill mt-40 p-0 m-0"

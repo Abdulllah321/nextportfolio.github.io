@@ -2,6 +2,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    z-index: 1000;
     
     .indicator{
         width: 10px;
@@ -10,5 +11,6 @@
         border-radius: 50%;
         position: absolute;
         left: -30px;
+        z-index: 1000;
     }
 }

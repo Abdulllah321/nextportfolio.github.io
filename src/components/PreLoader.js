@@ -62,7 +62,7 @@ export default function PreLoader() {
     >
       {dimension.width > 0 && (
         <>
-          <motion.p variants={opacity} initial="initial" animate="enter">
+          <motion.p initial="initial" animate="enter">
             <span></span>
             {words[index]}
           </motion.p>

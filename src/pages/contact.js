@@ -15,16 +15,16 @@ import Image from "next/image";
 import profile from "@/components/assets/profile.png";
 import { FaXTwitter } from "react-icons/fa6";
 import { DribbbleIcon, LinkedInIcon, PinterestIcon } from "@/components/Icons";
+import { BsFacebook } from "react-icons/bs";
 
 const Contact = () => {
-const icons = [
-  <BiUser key="user-icon" />,
-  <AiOutlineMail key="mail-icon" />,
-  <RiPhoneLine key="phone-icon" />,
-  <LuGlasses key="glasses-icon" />,
-  <BiMessageAltDetail key="message-icon" />,
-];
-
+  const icons = [
+    <BiUser key="user-icon" />,
+    <AiOutlineMail key="mail-icon" />,
+    <RiPhoneLine key="phone-icon" />,
+    <LuGlasses key="glasses-icon" />,
+    <BiMessageAltDetail key="message-icon" />,
+  ];
 
   const exampleText = [
     "John Doe",
@@ -101,12 +101,12 @@ const icons = [
         <meta name="description" content="my description" />
       </Head>
       <Layout>
-        <main className="my-32">
-          <div className="slidersOfImages max-w-screen-xl w-full flex max-w-[1280px] m-auto ">
-            <div className="w-[70%] relative">
+        <main className="py-32 w-full h-full relative z-[100] bg-[--light]">
+          <div className="slidersOfImages max-w-screen-[1280px] w-full flex max-w-[1280px] m-auto lg:flex-col-reverse lg:px-8 ">
+            <div className="w-[70%] relative lg:w-full">
               <AnimatedText
                 text={`Let's embark on our coding journey together!`}
-                className="text-[3.5rem] text-left leading-[1.2] mb-14"
+                className="text-[3.5rem] text-left leading-[1.2] mb-14 md:text-[3rem] sm:text-[2.5rem] xs:text-[2rem] lg:hidden"
               />
 
               <form
@@ -142,7 +142,7 @@ const icons = [
                         name={question.name}
                       />
                       <span className={styles.span}>
-                        {`Enter Your ${question.label}`}{" "}
+                        {`Enter Your ${question.label}`}
                         <span className={styles.exp}>
                           (<b>e.g,</b> {exampleText[index]})
                         </span>
@@ -162,52 +162,7 @@ const icons = [
                   </div>
                 </div>
               </form>
-            </div>
-            <div className="w-[30%] relative pl-12">
-              <div className="w-[10rem] mb-20 relative left-10 rounded-full overflow-hidden">
-                <Image
-                  src={profile}
-                  alt="Abdullah"
-                  priority
-                />
-              </div>
-              <div className="w-full">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.205096331115!2d67.15852922574688!3d24.925082092667974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33848c50f7981%3A0x2fed183ee972a3fa!2sPatel%20Residency%D8%8C%20Block%209%2FA%2C%20Gulistan-e-Jauhar-Malir%20Cantt%20Rd%2C%20Gul%20Housing%20Society%20Block%209%20A%20Karachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1696097843509!5m2!1sen!2s"
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
-              <div className="flex flex-col w-full mt-20">
-                <h1 className="text-2xl font-extrabold underline underline-offset-4 text-[--dark] uppercase">
-                  Contact Details
-                </h1>
-                <MagneticButton>
-                  <a href={`mailto:abdullahsufyan2007@gmail.com`} target="_blank">
-                    <h4
-                      className={`flex mt-4 items-center text-start ${styles.h4}`}
-                    >
-                      <BiLogoGmail className="text-[1.5rem] mr-2 text-[--dark] " />{" "}
-                      <span>abdullahsufyan2007@gmail.com</span>
-                    </h4>
-                  </a>
-                </MagneticButton>
-                <MagneticButton>
-                  <a href={`https://wa.me/923233297166/`} target="_blank">
-                    <h4
-                      className={`flex mt-4 items-center text-start ${styles.h4}`}
-                    >
-                      <RiWhatsappFill className="text-[1.5rem] mr-2 text-[--dark]" />{" "}
-                      <span>+92 323 3297166</span>
-                    </h4>
-                  </a>
-                </MagneticButton>
-              </div>
-              <div className="flex flex-col w-full mt-16">
+              <div className="lg:flex flex-col w-full mt-16 hidden">
                 <h1 className="text-2xl font-extrabold underline underline-offset-4 text-[--dark] uppercase">
                   Social Links
                 </h1>
@@ -245,6 +200,151 @@ const icons = [
                       <LinkedInIcon />
                       <h4 className={` ${styles.h4} mt-2`}>
                         <span>LinkedIn</span>
+                      </h4>
+                    </a>
+                  </MagneticButton>
+                  <MagneticButton>
+                    <a
+                      href="https://twitter.com"
+                      target={"_blank"}
+                      className={`w-8 flex flex-col items-center ${styles.an} `}
+                    >
+                      <BsFacebook className="text-[2rem] text-[--dark]" />
+                      <h4 className={` ${styles.h4} mt-2`}>
+                        <span>Facebook</span>
+                      </h4>
+                    </a>
+                  </MagneticButton>
+                  <MagneticButton>
+                    <a
+                      href="https://twitter.com"
+                      target={"_blank"}
+                      className={`w-8 flex flex-col items-center ${styles.an} `}
+                    >
+                      <PinterestIcon />
+                      <h4 className={` ${styles.h4} mt-2`}>
+                        <span>Pinterest</span>
+                      </h4>
+                    </a>
+                  </MagneticButton>
+                  <MagneticButton>
+                    <a
+                      href="https://twitter.com"
+                      target={"_blank"}
+                      className={`w-8 flex flex-col items-center ${styles.an} `}
+                    >
+                      <DribbbleIcon />
+                      <h4 className={` ${styles.h4} mt-2`}>
+                        <span>Dribble</span>
+                      </h4>
+                    </a>
+                  </MagneticButton>
+                </nav>
+              </div>
+            </div>
+
+            <div className="w-[30%] relative pl-12 lg:w-full lg:pl-0 lg:mb-16">
+              <div className="w-[10rem] mb-20 relative left-10 rounded-full overflow-hidden lg:hidden items-center">
+                <Image src={profile} alt="Abdullah" priority />
+              </div>
+              <h1 className="text-[3.5rem] text-left leading-[1.2] mb-14 md:text-[3rem] sm:text-[2.5rem] hidden lg:flex text-[--dark] indent-[4.5rem] md:indent-[4rem] ">
+                <Image
+                  src={profile}
+                  alt="Abdullah"
+                  priority
+                  className="hidden lg:block lg:w-[4rem] lg:h-[4rem] md:w-[3.5rem] md:h-[3.5rem] sm:w-[3rem] sm:h-[3rem] rounded-full absolute"
+                />
+                Let&apos;s embark on our coding journey together!
+              </h1>
+              <div className="w-full">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.205096331115!2d67.15852922574688!3d24.925082092667974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33848c50f7981%3A0x2fed183ee972a3fa!2sPatel%20Residency%D8%8C%20Block%209%2FA%2C%20Gulistan-e-Jauhar-Malir%20Cantt%20Rd%2C%20Gul%20Housing%20Society%20Block%209%20A%20Karachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1696097843509!5m2!1sen!2s"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+              <div className="flex flex-col w-full mt-20">
+                <h1 className="text-2xl font-extrabold underline underline-offset-4 text-[--dark] uppercase">
+                  Contact Details
+                </h1>
+                <MagneticButton>
+                  <a
+                    href={`mailto:abdullahsufyan2007@gmail.com`}
+                    target="_blank"
+                  >
+                    <h4
+                      className={`flex mt-4 items-center text-start ${styles.h4}`}
+                    >
+                      <BiLogoGmail className="text-[1.5rem] mr-2 text-[--dark] " />{" "}
+                      <span>abdullahsufyan2007@gmail.com</span>
+                    </h4>
+                  </a>
+                </MagneticButton>
+                <MagneticButton>
+                  <a href={`https://wa.me/923233297166/`} target="_blank">
+                    <h4
+                      className={`flex mt-4 items-center text-start ${styles.h4}`}
+                    >
+                      <RiWhatsappFill className="text-[1.5rem] mr-2 text-[--dark]" />{" "}
+                      <span>+92 323 3297166</span>
+                    </h4>
+                  </a>
+                </MagneticButton>
+              </div>
+              <div className="flex flex-col w-full mt-16 lg:hidden">
+                <h1 className="text-2xl font-extrabold underline underline-offset-4 text-[--dark] uppercase">
+                  Social Links
+                </h1>
+                <nav className="flex items-start justify-around flex-wrap gap-x-32 gap-y-8 mt-4">
+                  <MagneticButton>
+                    <a
+                      href="https://twitter.com"
+                      target={"_blank"}
+                      className={`w-8 flex flex-col items-center ${styles.an} `}
+                    >
+                      <FaXTwitter className="text-[2rem] text-[--dark]" />
+                      <h4 className={` ${styles.h4} mt-2 `}>
+                        <span>Twitter</span>
+                      </h4>
+                    </a>
+                  </MagneticButton>
+                  <MagneticButton>
+                    <a
+                      href="https://twitter.com"
+                      target={"_blank"}
+                      className={`w-8 flex flex-col items-center ${styles.an} `}
+                    >
+                      <AiFillGithub className="text-[2rem] text-[--dark]" />
+                      <h4 className={` ${styles.h4} mt-2`}>
+                        <span>Github</span>
+                      </h4>
+                    </a>
+                  </MagneticButton>
+                  <MagneticButton>
+                    <a
+                      href="https://twitter.com"
+                      target={"_blank"}
+                      className={`w-8 flex flex-col items-center ${styles.an} `}
+                    >
+                      <LinkedInIcon />
+                      <h4 className={` ${styles.h4} mt-2`}>
+                        <span>LinkedIn</span>
+                      </h4>
+                    </a>
+                  </MagneticButton>
+                  <MagneticButton>
+                    <a
+                      href="https://twitter.com"
+                      target={"_blank"}
+                      className={`w-8 flex flex-col items-center ${styles.an} `}
+                    >
+                      <BsFacebook className="text-[2rem] text-[--dark]" />
+                      <h4 className={` ${styles.h4} mt-2`}>
+                        <span>Facebook</span>
                       </h4>
                     </a>
                   </MagneticButton>

@@ -1,14 +1,14 @@
 .main {
   width: 100%;
   // position: relative;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 50px;
   margin: auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
   flex-wrap: wrap;
+  background: var(--light);
 
   .mainProject {
     width: 500px;
@@ -34,8 +34,8 @@
       width: 100%;
       background: var(--light);
       overflow: hidden;
-      transition: .3s all ease-out;
-      
+      transition: 0.3s all ease-out;
+
       video {
         width: 100%;
         scale: 1.1;
@@ -66,12 +66,12 @@
       top: 150px;
       z-index: -2;
       opacity: 0;
-      
+
       hr {
         position: relative;
         height: 30px;
         background: var(--dark);
-        transition: .3s all ease-out;
+        transition: 0.3s all ease-out;
       }
       .button {
         width: 120px;
@@ -98,7 +98,43 @@
           font-size: 1.5rem;
           font-weight: bold;
         }
+        .description {
+          font-size: medium;
+        }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .mainProject {
+    width: 400px !important;
+
+    .projectVideo {
+      height: 285px !important;
+    }
+  }
+  .button {
+    width: 80px !important;
+    height: 80px !important;
+    font-size: 0.7rem !important;
+    svg {
+      width: 1.2rem !important;
+    }
+  }
+  .title {
+    font-size: 1.2rem !important;
+  }
+  .description {
+    font-size: x-small !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .mainProject {
+    width: 300px !important;
+
+    .projectVideo {
+      height: 210px !important;
     }
   }
 }

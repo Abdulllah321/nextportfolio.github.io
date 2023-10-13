@@ -52,6 +52,7 @@
       transition: 0.3s ease;
       display: flex;
       align-items: center;
+      flex-wrap: nowrap;
 
       .exp {
         font-size: 0.8rem;
@@ -162,4 +163,11 @@
 }
 .an:hover .h4 span::after {
   transform: scaleX(1);
+}
+
+
+@media screen and (max-width:768px) {
+    .exp {
+        display: none;
+      }
 }

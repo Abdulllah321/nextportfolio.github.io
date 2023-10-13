@@ -6,20 +6,20 @@
   justify-content: center;
   position: fixed;
   z-index: 99;
-  background-color: var(--light);
+  background-color: var(--dark);
   svg {
     position: absolute;
     top: 0;
     width: 100%;
     height: calc(100% + 300px);
     path {
-      fill: var(--light);
+      fill: var(--dark);
     }
   }
 
   p {
     display: flex;
-    color: var(--dark);
+    color: var(--light);
     font-size: 5rem;
     align-items: center;
     position: absolute;
@@ -29,7 +29,7 @@
       display: block;
       width: 20px;
       height: 20px;
-      background-color: var(--dark);
+      background-color: var(--light);
       border-radius: 50%;
       margin-right: 10px;
     }

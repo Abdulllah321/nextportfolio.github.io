@@ -135,7 +135,7 @@ export default function Home() {
           </div>
           <HireMe />
           <CV />
-          <div className="slidersOfImages">
+          <div className="slidersOfImages relative py-52 z-[100]">
             <SlidingImages />
             <SlidingImagesInvert />
             <SlidingImages transform="translate-x-[100px]" />

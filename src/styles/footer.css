@@ -1,18 +1,19 @@
 footer.footer {
   position: relative;
   width: 100%;
-  margin: auto;
-  height: 100vh;
-  height: auto;
+  /* margin: auto; */
+  min-height: 100vh;
   background: var(--primary);
   color: #f5f5f5;
   z-index: 0;
+  padding: 0 20px;
 }
 
 .footer-container {
   max-width: 1280px;
   margin: auto;
 }
+
 footer .footerButton {
   width: 13rem;
   height: 13rem;
@@ -33,6 +34,7 @@ footer .footerButton .roundedButton:hover span {
 
 footer .footerButton .circle {
   background-color: var(--dark);
+  border-radius: 100%;
 }
 
 footer .top {
@@ -135,6 +137,7 @@ footer .bottom1 a {
 footer .bottom .right > .center {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 footer .bottom .right h1 {
@@ -144,6 +147,12 @@ footer .bottom .right h1 {
 
 footer .bottom .right li {
   list-style-type: none;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+
+footer .bottom .right li:hover a {
+  text-decoration: underline;
 }
 
 footer .bottom .right h2 {
@@ -161,6 +170,10 @@ footer .bottom .right li > a {
 }
 
 @media screen and (max-width: 1024px) {
+  footer.footer {
+    padding: 0 50px;
+  }
+
   footer .top h1 {
     font-size: 2rem;
     width: 60%;
@@ -171,28 +184,60 @@ footer .bottom .right li > a {
     height: 10rem;
   }
 
-  footer.footer {
-    padding: 0 50px;
-  }
   footer .bottom1 {
     border-top: 1px solid #f5f5f5;
   }
+
+  footer .bottom .right {
+    width: 100%;
+    margin: auto;
+  }
+  footer .bottom .right > .center {
+    justify-content: space-around;
+  }
+  footer .bottom .right h1 {
+    text-align: center;
+  }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
   footer .top h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     width: 70%;
   }
   footer .footerButton {
-    width: 8rem;
-    height: 8rem;
+    width: 7rem;
+    height: 6.5rem;
   }
 
   footer .footerButton .roundedButton span {
-    font-size: 15px;
+    font-size: 13px;
   }
   footer .bottom1,
   footer .bottom1 a {
     font-size: 15px;
+  }
+  footer .bottom .right h1 {
+    font-size: 15px;
+  }
+
+  footer .bottom .right > .center {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  footer .bottom .right h1 {
+    text-align: left;
+    margin-left: 20px;
+  }
+  footer.footer {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 400px) {
+  footer .bottom1,
+  footer .bottom1 a {
+    font-size: 12px;
+  }
+  footer.footer {
+    padding: 0 20px;
   }
 }

@@ -14,7 +14,7 @@ const Footer = () => {
       gsap.registerPlugin(ScrollTrigger);
 
       gsap.set(".footer-container", {
-        yPercent: -50,
+        yPercent: -70,
         opacity: 0,
       });
 
@@ -59,9 +59,34 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="right !m-auto lg:!w-10/12">
+          <div className="right">
             <h1>hello@abdullahsufyan.com</h1>
             <div className="center">
+              <div className="right1">
+                <ul>
+                  <li>
+                    <h2>Social</h2>
+                  </li>
+                  <li>
+                    <a href="#">Twitter</a>
+                  </li>
+                  <li>
+                    <a href="#">Github</a>
+                  </li>
+                  <li>
+                    <a href="#">Facebook</a>
+                  </li>
+                  <li>
+                    <a href="#">LinkedIn</a>
+                  </li>
+                  <li>
+                    <a href="#">Pinterest</a>
+                  </li>
+                  <li>
+                    <a href="#">Dribble</a>
+                  </li>
+                </ul>
+              </div>
               <div className="left1">
                 <ul>
                   <li>
@@ -78,25 +103,6 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link href="/contact">Contact</Link>
-                  </li>
-                </ul>
-              </div>
-              <div className="right1">
-                <ul>
-                  <li>
-                    <h2>Social</h2>
-                  </li>
-                  <li>
-                    <Link href="#">Twitter</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Linkedin</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Dribble</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Github</Link>
                   </li>
                 </ul>
               </div>

@@ -31,6 +31,7 @@ const HireMe = () => {
 
   
   const Hire = {
+    
     initial: {
       opacity: 0,
       x: -100,
