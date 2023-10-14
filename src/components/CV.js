@@ -17,11 +17,10 @@ const CV = () => {
 
   // const profileTimeline = useRef(null);
 
+  const lg = 1024;
+  const md = 768;
+  const sm = 640;
   useEffect(() => {
-    const lg = 1024;
-    const md = 768;
-    const sm = 640;
-
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(".cv1", {
@@ -76,8 +75,9 @@ const CV = () => {
           : window.innerWidth > md
           ? "80%"
           : window.innerWidth > sm
-          ? "90%" 
-          :window.innerWidth < sm ? "100%"
+          ? "90%"
+          : window.innerWidth < sm
+          ? "100%"
           : "",
       scrollTrigger: {
         trigger: ".cv",
@@ -89,8 +89,9 @@ const CV = () => {
 
     gsap.to(".cv", {
       position: "sticky",
-      top: window.innerWidth > lg ? "25%" : window.innerWidth < lg ? "25%" : "10%" ,
-       y: window.innerWidth < lg ? "-25%" : "" ,
+      top:
+        window.innerWidth > lg ? "25%" : window.innerWidth < lg ? "25%" : "10%",
+      y: window.innerWidth < lg ? "-25%" : "",
       scrollTrigger: {
         trigger: ".cv-main",
         start: window.innerWidth > lg ? "top top" : "top 20%",
@@ -268,8 +269,8 @@ const CV = () => {
             websites work. I really enjoy making websites that are not just
             functional but also look super cool with animations and stuff. If
             you ever need a website, whether it&apos;s for your business or a
-            personal project, I&apos;m your go-to person. I&apos;ll make sure your
-            website looks awesome and works like a charm. Just drop me a
+            personal project, I&apos;m your go-to person. I&apos;ll make sure
+            your website looks awesome and works like a charm. Just drop me a
             message, and we can work together to bring your website dreams to
             life!
           </p>
