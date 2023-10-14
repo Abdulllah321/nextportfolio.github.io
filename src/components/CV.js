@@ -14,20 +14,13 @@ import Link from "next/link";
 
 const CV = () => {
   const cvRef = useRef(null);
-  const [xl, setXl] = useState(false);
-  const [lg, setLg] = useState(false);
-  const [md, setMd] = useState(false);
-  const [sm, setSm] = useState(false);
-  const [xs, setXs] = useState(false);
 
   // const profileTimeline = useRef(null);
 
   useEffect(() => {
-    const xl = 1280;
     const lg = 1024;
     const md = 768;
     const sm = 640;
-    const xs = 480;
 
     gsap.registerPlugin(ScrollTrigger);
 

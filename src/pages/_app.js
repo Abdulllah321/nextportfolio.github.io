@@ -49,9 +49,9 @@ export default function App({ Component, pageProps }) {
       </Head>
 
       <AnimatePresence mode="wait">
-        {/* {isLoading ? ( */}
-          {/* // <PreLoader /> */}
-        {/* // ) : ( */}
+        {isLoading ? (
+           <PreLoader />
+         ) : (
           <motion.div
             className={`${montserrat.variable} font-mont bg-[--light] w-full min-h-screen`}
             key={pathname}
@@ -59,7 +59,7 @@ export default function App({ Component, pageProps }) {
           
             <Component {...pageProps} />
             {/* Display text animation here */}
-            {/* <motion.div
+            <motion.div
               className={`fixed bg-[--dark] w-screen h-screen mx-auto z-[1000] flex justify-center items-center`}
               initial={{ top: "-200%" }}
               animate={{ top: "-200%" }}
@@ -70,9 +70,9 @@ export default function App({ Component, pageProps }) {
               <h1 className="text-[--light] text-8xl capitalize origin-right">
                 {displayText}
               </h1>
-            </motion.div> */}
+            </motion.div>
             {/* Second display text animation here */}
-          {/* `  <motion.div
+          `  <motion.div
               className={`fixed bg-[--dark] w-screen h-screen mx-auto z-[1000] flex justify-center items-center`}
               initial={{ top: "0" }}
               animate={{ top: "200%" }}
@@ -83,9 +83,9 @@ export default function App({ Component, pageProps }) {
               <h1 className="text-[--light] text-8xl capitalize">
                 {displayText}
               </h1>
-            </motion.div>` */}
+            </motion.div>`
           </motion.div>
-        {/* // )} */}
+        // )}
       </AnimatePresence>
     </>
   );
