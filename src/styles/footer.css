@@ -29,7 +29,7 @@ footer .footerButton .roundedButton {
 }
 
 footer .footerButton .roundedButton:hover span {
-  color: #1b1b1b;
+  color: var(--light);
 }
 
 footer .footerButton .circle {

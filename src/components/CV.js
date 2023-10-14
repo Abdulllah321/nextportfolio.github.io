@@ -1,8 +1,8 @@
 "use-client";
 import React, { useEffect, useRef, useState } from "react";
-import CV1 from "./assets/cv/image_part_001.png";
-import CV2 from "./assets/cv/image_part_002.png";
-import CV3 from "./assets/cv/image_part_003.png";
+import CV1 from "./assets/cv/image_part_001.jpg";
+import CV2 from "./assets/cv/image_part_002.jpg";
+import CV3 from "./assets/cv/image_part_003.jpg";
 // import ProfileImage from "@/components/assets/profile.png";
 import Image from "next/image";
 import gsap from "gsap";
