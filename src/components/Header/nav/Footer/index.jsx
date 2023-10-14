@@ -4,7 +4,7 @@ import {motion} from "framer-motion"
 import { DribbbleIcon, GithubIcon, LinkedInIcon, PinterestIcon } from '@/components/Icons';
 import { BsFacebook } from 'react-icons/bs';
 
-export default function index() {
+export default function Index() {
   return (
     <nav className="flex items-center justify-center flex-wrap gap-1">
       <motion.a

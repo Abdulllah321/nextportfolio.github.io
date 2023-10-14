@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import styles from "./style.module.scss";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import Link from "./Link/Index";
+import Curve from "./Curve/Index";
+import Footer from "./Footer/Index";
 import { menuSlide } from "../animation";
-import Link from "./Link";
-import Curve from "./Curve";
-import Footer from "./Footer";
 
 const navItems = [
   {
@@ -26,7 +26,7 @@ const navItems = [
   },
 ];
 
-export default function index() {
+export default function Index() {
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
 
@@ -48,16 +48,16 @@ export default function index() {
           <div className={styles.header}>
             <p className="my-4">Navigation</p>
           </div>
-            {navItems.map((data, index) => {
-              return (
-                <Link
-                  key={index}
-                  data={{ ...data, index }}
-                  isActive={selectedIndicator == data.href}
-                  setSelectedIndicator={setSelectedIndicator}
-                ></Link>
-              );
-            })}
+          {navItems.map((data, index) => {
+            return (
+              <Link
+                key={index}
+                data={{ ...data, index }}
+                isActive={selectedIndicator == data.href}
+                setSelectedIndicator={setSelectedIndicator}
+              ></Link>
+            );
+          })}
         </div>
         <Footer />
       </div>

@@ -3,12 +3,12 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./style.module.scss";
 import { usePathname } from "next/navigation";
 import { AnimatePresence } from "framer-motion";
-import Nav from "./nav";
+import Nav from "./nav/Index";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import MagneticButton from "../MagneticButton";
 
-export default function index() {
+export default function Index() {
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
   const button = useRef(null);
