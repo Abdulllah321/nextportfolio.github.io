@@ -3,11 +3,11 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { scale, slide } from "../../animation";
 
-export default function Index({ data, isActive, setSelectedIndicator }) {
-  const { title, href, index } = data;
+const Links = ({ data, isActive, setSelectedIndicator }) => {
+    const { title, href, index } = data;
 
   return (
-    <motion.div
+       <motion.div
       className={styles.link}
       onMouseEnter={() => {
         setSelectedIndicator(href);
@@ -25,5 +25,7 @@ export default function Index({ data, isActive, setSelectedIndicator }) {
       ></motion.div>
       <Link href={href}>{title}</Link>
     </motion.div>
-  );
+  )
 }
+
+export default Links

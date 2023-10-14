@@ -26,10 +26,9 @@ const navItems = [
   },
 ];
 
-export default function Index() {
+const Nav = () => {
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
-
   return (
     <motion.div
       variants={menuSlide}
@@ -64,4 +63,6 @@ export default function Index() {
       <Curve />
     </motion.div>
   );
-}
+};
+
+export default Nav;
