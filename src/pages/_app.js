@@ -62,8 +62,8 @@ export default function App({ Component, pageProps }) {
             {/* Display text animation here */}
             <motion.div
               className={`fixed bg-[--dark] w-screen h-screen mx-auto z-[1000] flex justify-center items-center`}
-              initial={{ top: "-200%" }}
-              animate={{ top: "-200%" }}
+              initial={{ top: "-100%"}}
+              animate={{ top: "-100%" }}
               exit={{ top: "0%" }}
               transition={{ duration: 1.5, ease: [0.76, 0, 0.24, 1] }}
             >
@@ -76,8 +76,8 @@ export default function App({ Component, pageProps }) {
           `  <motion.div
               className={`fixed bg-[--dark] w-screen h-screen mx-auto z-[1000] flex justify-center items-center`}
               initial={{ top: "0" }}
-              animate={{ top: "200%" }}
-              exit={{ top: "200%" }}
+              animate={{ top: "100%" }}
+              exit={{ top: "100%" }}
               transition={{ duration: 1.5, ease: [0.76, 0, 0.24, 1] }}
             >
               <div className="w-4 h-4 bg-[--light] rounded-full -left-4 relative" />

@@ -1,4 +1,3 @@
-"use client";
 import React, { useEffect, useRef } from "react";
 import Head from "next/head";
 import styles from "@/styles/project.module.scss";
@@ -11,7 +10,6 @@ import { projectVideos } from "@/components/Constants";
 import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
 
-// Function to create laptop video refs
 const createLaptopVideoRefs = () => {
   return projectVideos.map(() => {
     return useRef(null);
@@ -20,8 +18,6 @@ const createLaptopVideoRefs = () => {
 
 const Projects = () => {
   const projectVideoRefs = useRef([]);
-  // const laptopVideoRefs = useRef([]);
-
   const laptopVideoRefsArray = createLaptopVideoRefs();
 
   useEffect(() => {
@@ -30,10 +26,8 @@ const Projects = () => {
       const projectVideoRef = projectVideoRefs.current[projectVideo.id];
 
       const handleLaptopVideoEnd = () => {
-        // Set the opacity of the project video to 1 when the laptop video ends
         gsap.to(projectVideoRef, { opacity: 1, duration: 0.5 });
 
-        // Animate the liveProject element
         const mainProjectElement = projectVideoRef.closest(
           ".project_mainProject__T6WIH"
         );
@@ -60,14 +54,14 @@ const Projects = () => {
         <title>Abdullah || Project page</title>
         <meta name="description" content="mydescription" />
       </Head>
-      <Layout className="p-0 pt-0 z-[100] relative  ">
-        <div className=" !z-[100] !relative w-full h-full bg-[--light]  slidersOfImages pb-40 ">
+      <Layout className="p-0 pt-0 z-[100] relative">
+        <div className=" !z-[100] !relative w-full h-full bg-[--light] slidersOfImages pb-40">
           <main
-            className={`${styles.main}  max-w-[1280px] transition-all duration-300 ease-out `}
+            className={`${styles.main}  max-w-[1280px] transition-all duration-300 ease-out`}
           >
             <AnimatedText
               text="Projects"
-              className="text-[5rem] my-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:my-8 "
+              className="text-[5rem] my-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:my-8"
             />
             {projectVideos.map((projectVideo, index) => (
               <div key={projectVideo.id} className={styles.mainProject}>
