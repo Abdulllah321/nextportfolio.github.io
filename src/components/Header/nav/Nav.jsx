@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import styles from "./style.module.scss";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import Link from "./Link/Index";
-import Curve from "./Curve/Index";
-import Footer from "./Footer/Index";
+import Link from "./Link/Links";
+import Curve from "./Curve/Curve";
+import Footer from "./Footer/FooterBottom";
 import { menuSlide } from "../animation";
 
 const navItems = [

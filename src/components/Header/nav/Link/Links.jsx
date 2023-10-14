@@ -29,3 +29,4 @@ const Links = ({ data, isActive, setSelectedIndicator }) => {
 }
 
 export default Links
+
