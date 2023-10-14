@@ -11,16 +11,17 @@ import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
 
 
+// Function to create laptop video refs
+const createLaptopVideoRefs = () => {
+  return projectVideos.map(() => {
+    return useRef(null);
+  });
+};
+
 const Projects = () => {
   const projectVideoRefs = useRef([]);
   // const laptopVideoRefs = useRef([]);
 
-  // Function to create laptop video refs
-  const createLaptopVideoRefs = () => {
-    return projectVideos.map(() => {
-      return useRef(null);
-    });
-  };
 
   const laptopVideoRefsArray = createLaptopVideoRefs();
 
