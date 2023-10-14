@@ -1,3 +1,4 @@
+"use client"
 import "@/styles/cv.css";
 import "@/styles/globals.css";
 import "@/styles/footer.css";

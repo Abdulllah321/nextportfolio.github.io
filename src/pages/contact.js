@@ -1,3 +1,4 @@
+"use client";
 import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
 import Head from "next/head";
@@ -384,9 +385,9 @@ const Contact = () => {
                 >
                   <MagneticButton>
                     <motion.a
-                            variants={singleWord}
-        initial="initial"
-        animate="animate"
+                      variants={singleWord}
+                      initial="initial"
+                      animate="animate"
                       href="https://twitter.com"
                       target={"_blank"}
                       className={`w-8 flex flex-col items-center ${styles.an} `}
@@ -399,9 +400,9 @@ const Contact = () => {
                   </MagneticButton>
                   <MagneticButton>
                     <motion.a
-                            variants={singleWord}
-        initial="initial"
-        animate="animate"
+                      variants={singleWord}
+                      initial="initial"
+                      animate="animate"
                       href="https://twitter.com"
                       target={"_blank"}
                       className={`w-8 flex flex-col items-center ${styles.an} `}
@@ -414,9 +415,9 @@ const Contact = () => {
                   </MagneticButton>
                   <MagneticButton>
                     <motion.a
-                            variants={singleWord}
-        initial="initial"
-        animate="animate"
+                      variants={singleWord}
+                      initial="initial"
+                      animate="animate"
                       href="https://twitter.com"
                       target={"_blank"}
                       className={`w-8 flex flex-col items-center ${styles.an} `}
@@ -429,9 +430,9 @@ const Contact = () => {
                   </MagneticButton>
                   <MagneticButton>
                     <motion.a
-                            variants={singleWord}
-        initial="initial"
-        animate="animate"
+                      variants={singleWord}
+                      initial="initial"
+                      animate="animate"
                       href="https://twitter.com"
                       target={"_blank"}
                       className={`w-8 flex flex-col items-center ${styles.an} `}
@@ -444,9 +445,9 @@ const Contact = () => {
                   </MagneticButton>
                   <MagneticButton>
                     <motion.a
-                            variants={singleWord}
-        initial="initial"
-        animate="animate"
+                      variants={singleWord}
+                      initial="initial"
+                      animate="animate"
                       href="https://twitter.com"
                       target={"_blank"}
                       className={`w-8 flex flex-col items-center ${styles.an} `}
@@ -459,9 +460,9 @@ const Contact = () => {
                   </MagneticButton>
                   <MagneticButton>
                     <motion.a
-                            variants={singleWord}
-        initial="initial"
-        animate="animate"
+                      variants={singleWord}
+                      initial="initial"
+                      animate="animate"
                       href="https://twitter.com"
                       target={"_blank"}
                       className={`w-8 flex flex-col items-center ${styles.an} `}

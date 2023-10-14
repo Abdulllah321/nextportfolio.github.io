@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useRef } from "react";
 import Head from "next/head";
 import styles from "@/styles/project.module.scss";
@@ -10,7 +11,6 @@ import { projectVideos } from "@/components/Constants";
 import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
 
-
 // Function to create laptop video refs
 const createLaptopVideoRefs = () => {
   return projectVideos.map(() => {
@@ -21,7 +21,6 @@ const createLaptopVideoRefs = () => {
 const Projects = () => {
   const projectVideoRefs = useRef([]);
   // const laptopVideoRefs = useRef([]);
-
 
   const laptopVideoRefsArray = createLaptopVideoRefs();
 
