@@ -1,13 +1,13 @@
 import styles from "./style.module.scss";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { scale, slide } from "../../Animation";
+import { slide } from "../../animation";
 
 const Links = ({ data, isActive, setSelectedIndicator }) => {
-    const { title, href, index } = data;
+  const { title, href, index } = data;
 
   return (
-       <motion.div
+    <motion.div
       className={styles.link}
       onMouseEnter={() => {
         setSelectedIndicator(href);
@@ -25,8 +25,7 @@ const Links = ({ data, isActive, setSelectedIndicator }) => {
       ></motion.div>
       <Link href={href}>{title}</Link>
     </motion.div>
-  )
-}
+  );
+};
 
-export default Links
-
+export default Links;

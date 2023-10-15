@@ -2,7 +2,7 @@
 import styles from "@/styles/preloader.module.scss";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { opacity, slideUp } from "./Anim";
+import { slideUp } from "./animate"; 
 
 const words = [
   "Loading",
