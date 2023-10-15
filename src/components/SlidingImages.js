@@ -36,8 +36,9 @@ export default function SlidingImages() {
         trigger: document.documentElement,
         scrub: 0.25,
         start: "200% top",
-        end: "500% bottom",
+        end: "600% bottom",
         onUpdate: (e) => (directionRef.current = e.direction * -1),
+        markers:true
       },
       x: "0px",
     });
