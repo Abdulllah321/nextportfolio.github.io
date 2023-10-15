@@ -51,18 +51,24 @@ export default function App({ Component, pageProps }) {
 
       <AnimatePresence mode="wait">
         {isLoading ? (
-           <PreLoader />
-         ) : (
+          <>
+            <PreLoader />
+            <Head>
+              <title>
+                Abdullah
+              </title>
+            </Head>
+          </>
+        ) : (
           <motion.div
             className={`${montserrat.variable} font-mont bg-[--light] w-full min-h-screen`}
             key={pathname}
           >
-          
             <Component {...pageProps} />
             {/* Display text animation here */}
             <motion.div
               className={`fixed bg-[--dark] w-screen h-screen mx-auto z-[1000] flex justify-center items-center`}
-              initial={{ top: "-100%"}}
+              initial={{ top: "-100%" }}
               animate={{ top: "-100%" }}
               exit={{ top: "0%" }}
               transition={{ duration: 1.5, ease: [0.76, 0, 0.24, 1] }}
@@ -72,8 +78,8 @@ export default function App({ Component, pageProps }) {
                 {displayText}
               </h1>
             </motion.div>
-            {/* Second display text animation here */}
-          `  <motion.div
+            {/* Second display text animation here */}`{" "}
+            <motion.div
               className={`fixed bg-[--dark] w-screen h-screen mx-auto z-[1000] flex justify-center items-center`}
               initial={{ top: "0" }}
               animate={{ top: "100%" }}
@@ -84,9 +90,10 @@ export default function App({ Component, pageProps }) {
               <h1 className="text-[--light] text-8xl capitalize">
                 {displayText}
               </h1>
-            </motion.div>`
+            </motion.div>
+            `
           </motion.div>
-         )}
+        )}
       </AnimatePresence>
     </>
   );

@@ -167,3 +167,106 @@ export const projectVideos = [
     description:"This project is a Bootstrap-based replica of Wave Cafe's user interface, with no backend functionality"
   },
 ];
+
+import waveCafeUrl from "@/components/assets/project/wavecafe.png";
+
+
+export const slideImg = [
+  {
+    id: 1,
+    src: waveCafeUrl,
+    href: "https://abd-wavecafe.netlify.app/",
+
+  },
+  {
+    id: 2,
+    src: waveCafeUrl,
+    href: "https://abd-wavecafe.netlify.app/",
+
+  },
+  {
+    id: 3,
+    src: waveCafeUrl,
+    href: "https://abd-wavecafe.netlify.app/",
+
+  },
+  {
+    id: 4,
+    src: waveCafeUrl,
+    href: "https://abd-wavecafe.netlify.app/",
+
+  },
+
+  {
+    id: 5,
+    src: waveCafeUrl,
+    href: "https://abd-wavecafe.netlify.app/",
+  
+  },
+
+  {
+    id: 6,
+    src: waveCafeUrl,
+    href: "https://abd-wavecafe.netlify.app/",
+  
+  },
+  {
+    id: 7,
+    src: waveCafeUrl,
+    href: "https://abd-wavecafe.netlify.app/",
+  
+  },
+
+  {
+    id: 8,
+    src: waveCafeUrl,
+    href: "https://abd-wavecafe.netlify.app/",
+  
+  },
+  {
+    id: 9,
+    src: waveCafeUrl,
+    href: "https://abd-wavecafe.netlify.app/",
+  
+  },
+  {
+    id: 10,
+    src: waveCafeUrl,
+    href: "https://abd-wavecafe.netlify.app/",
+  },
+  {
+    id: 11,
+    src: waveCafeUrl,
+    href: "https://abd-wavecafe.netlify.app/",
+  },
+  {
+    id: 12,
+    src: waveCafeUrl,
+    href: "https://abd-wavecafe.netlify.app/",
+  },
+  {
+    id: 13,
+    src: waveCafeUrl,
+    href: "https://abd-wavecafe.netlify.app/",
+  },
+  {
+    id: 14,
+    src: waveCafeUrl,
+    href: "https://abd-wavecafe.netlify.app/",
+  },
+  {
+    id: 15,
+    src: waveCafeUrl,
+    href: "https://abd-wavecafe.netlify.app/",
+  },
+  {
+    id: 16,
+    src: waveCafeUrl,
+    href: "https://abd-wavecafe.netlify.app/",
+  },
+  {
+    id: 17,
+    src: waveCafeUrl,
+    href: "https://abd-wavecafe.netlify.app/",
+  },
+];

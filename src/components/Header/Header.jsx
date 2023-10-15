@@ -8,8 +8,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import MagneticButton from "../MagneticButton";
 
-export default function Index() {
-  const [isActive, setIsActive] = useState(false);
+const Header = () => {
+    const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
   const button = useRef(null);
 
@@ -44,9 +44,8 @@ export default function Index() {
         },
       },
     });
-  }, []);
-
-  return (
+  }, [isActive]);
+    return (
     <>
       <div ref={button} className={`${styles.headerButtonContainer} lg:hidden`}>
         <MagneticButton>
@@ -69,3 +68,5 @@ export default function Index() {
     </>
   );
 }
+
+export default Header

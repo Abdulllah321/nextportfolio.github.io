@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import MagneticButton from "../components/MagneticButton";
 
-export default function index({
+export default function Button({
   children,
   backgroundColor = "#455CE9",
   ...attributes

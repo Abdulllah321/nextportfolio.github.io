@@ -46,7 +46,7 @@ const Projects = () => {
 
       laptopVideoRef.addEventListener("ended", handleLaptopVideoEnd);
     });
-  }, []);
+  }, [laptopVideoRefsArray]);
 
   return (
     <>

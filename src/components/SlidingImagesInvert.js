@@ -5,14 +5,13 @@ import React, { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { motion } from "framer-motion";
-import waveCafeUrl from "@/components/assets/project/wavecafe.png";
+import { slideImg } from "./Constants";
 
 export default function SlidingImages() {
   const slider = useRef(null);
   const xPercentRef = useRef(0);
   const directionRef = useRef(-1);
-
-  const projectRefs = Array.from({ length: 10 }, () => useRef(null));
+  const projectRefs = []; // Change this to an array
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -23,13 +22,12 @@ export default function SlidingImages() {
         start: "200% top",
         end: "500% bottom",
         onUpdate: (e) => (directionRef.current = e.direction * -1),
-        // markers: true
       },
       x: "0px",
     });
 
     requestAnimationFrame(animate);
-  }, []);
+  });
 
   const animate = () => {
     if (xPercentRef.current < -100) {
@@ -39,32 +37,38 @@ export default function SlidingImages() {
     }
 
     projectRefs.forEach((ref) => {
-      gsap.set(ref.current, { xPercent: xPercentRef.current });
+      gsap.set(ref, { xPercent: xPercentRef.current }); // Change ref.current to ref
     });
 
     requestAnimationFrame(animate);
 
-    xPercentRef.current -= .3 * directionRef.current;
+    xPercentRef.current -= 0.3 * directionRef.current;
   };
-
 
   return (
     <motion.div className={styles.sliderContainer}>
       <div ref={slider} className={`${styles.slider} -translate-x-2/4`}>
-        {projectRefs.map((projectRef, index) => (
-          <div key={index} ref={projectRef}>
-            <Link href={`https://abd-wavecafe.netlify.app/`} target="_blank">
-              <div className={styles.videos}>
-                <Image
-                  priority
-                  className={styles.video}
-                  src={waveCafeUrl}
-                  alt="waveCafe"
-                />
-              </div>
-            </Link>
-          </div>
-        ))}
+        {slideImg.map(
+          (
+            slide,
+            index // Use slideImg as an array
+          ) => (
+            <div key={index} ref={(ref) => projectRefs.push(ref)}>
+              {" "}
+              {/* Push refs into the array */}
+              <Link href={slide.href} target="_blank">
+                <div className={styles.videos}>
+                  <Image
+                    priority
+                    className={styles.video}
+                    src={slide.src}
+                    alt={slide.title}
+                  />
+                </div>
+              </Link>
+            </div>
+          )
+        )}
       </div>
     </motion.div>
   );

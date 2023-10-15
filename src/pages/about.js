@@ -17,11 +17,12 @@ const AnimatedNumbers = ({ value }) => {
   const springValue = useSpring(motionValue, { duration: 3000 });
   const isInView = useInView(ref, { once: true });
 
-  useEffect(() => {
-    if (isInView) {
-      motionValue.set(value);
-    }
-  }, [isInView, value]);
+ useEffect(() => {
+   if (isInView) {
+     motionValue.set(value);
+   }
+ }, [isInView, value, motionValue]);
+
 
   useEffect(() => {
     springValue.on("change", (latest) => {
@@ -29,7 +30,7 @@ const AnimatedNumbers = ({ value }) => {
         ref.current.textContent = latest.toFixed(0);
       }
     });
-  }, []);
+  });
 
   return <span ref={ref}></span>;
 };
