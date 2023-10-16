@@ -7,11 +7,27 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { motion } from "framer-motion";
 import { slideImg } from "./Constants";
 
+function shuffleArray(array) {
+  // Create a copy of the original array
+  const shuffledArray = [...array];
+
+  // Perform Fisher-Yates shuffle
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+
+  return shuffledArray;
+}
+
 export default function SlidingImages() {
+  const shuffledSlideImg = shuffleArray(slideImg);
+
+  const firstText = useRef(null);
+  const secondText = useRef(null);
   const slider = useRef(null);
-  const xPercentRef = useRef(0);
-  const directionRef = useRef(-1);
-  const projectRefs = []; // Change this to an array
+  let xPercent = 0;
+  let direction = -1;
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -20,55 +36,62 @@ export default function SlidingImages() {
         trigger: document.documentElement,
         scrub: 0.25,
         start: "200% top",
-        end: "500% bottom",
-        onUpdate: (e) => (directionRef.current = e.direction * -1),
+        end: "550% bottom",
+        onUpdate: (e) => (direction = e.direction * -1),
+        // markers: true,
       },
-      x: "0px",
+      x: "-2000px",
     });
-
     requestAnimationFrame(animate);
-  });
+  }, []);
 
   const animate = () => {
-    if (xPercentRef.current < -100) {
-      xPercentRef.current = 0;
-    } else if (xPercentRef.current > 0) {
-      xPercentRef.current = -100;
+    if (xPercent < -75) {
+      xPercent = 0;
+    } else if (xPercent > 0) {
+      xPercent = -75;
     }
-
-    projectRefs.forEach((ref) => {
-      gsap.set(ref, { xPercent: xPercentRef.current }); // Change ref.current to ref
-    });
-
+    gsap.set(firstText.current, { xPercent: xPercent });
+    gsap.set(secondText.current, { xPercent: xPercent });
     requestAnimationFrame(animate);
-
-    xPercentRef.current -= 0.3 * directionRef.current;
+    xPercent -= 0.02 * direction;
   };
 
   return (
     <motion.div className={styles.sliderContainer}>
-      <div ref={slider} className={`${styles.slider} -translate-x-2/4`}>
-        {slideImg.map(
-          (
-            slide,
-            index // Use slideImg as an array
-          ) => (
-            <div key={index} ref={(ref) => projectRefs.push(ref)}>
-              {" "}
-              {/* Push refs into the array */}
-              <Link href={slide.href} target="_blank">
-                <div className={styles.videos}>
-                  <Image
-                    priority
-                    className={styles.video}
-                    src={slide.src}
-                    alt={slide.title}
-                  />
-                </div>
-              </Link>
-            </div>
-          )
-        )}
+      <div ref={slider} className={`${styles.slider}`}>
+        <div ref={firstText} className={`${styles.sliders}`}>
+          {shuffledSlideImg.map((slide, index) => (
+            <Link href={slide.href} key={index}>
+              <div className={styles.videos}>
+                <Image
+                  priority
+                  className={styles.video}
+                  src={slide.src}
+                  alt={slide.title}
+                />
+              </div>
+            </Link>
+          ))}
+        </div>
+        <div ref={secondText} className={`${styles.sliders}`}>
+          {shuffledSlideImg.map((slide, index) => (
+            <Link
+              key={index}
+              href={slide.href}
+              className="absolute left-full top-0 border-dark border-2"
+            >
+              <div className={styles.videos}>
+                <Image
+                  priority
+                  className={styles.video}
+                  src={slide.src}
+                  alt={slide.title}
+                />
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </motion.div>
   );

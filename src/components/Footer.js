@@ -14,7 +14,7 @@ const Footer = () => {
       gsap.registerPlugin(ScrollTrigger);
 
       gsap.set(".footer-container", {
-        yPercent: -70,
+        yPercent: -50,
         opacity: 0,
       });
 

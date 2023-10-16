@@ -8,7 +8,7 @@ const Details = ({ type, time, place, info }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[70%] overflow-hidden mx-auto flex flex-col items-center justify-between md:w-[80%]"
+      className="max-w-[1280px] my-8 first:mt-0 last:mb-0 w-[70%] overflow-hidden mx-auto flex flex-col items-center justify-between md:w-[80%]"
     >
       <LiIcon references={ref} />
       <motion.div

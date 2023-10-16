@@ -332,6 +332,7 @@ const Contact = () => {
                   style={{ border: 0 }}
                   allowFullScreen=""
                   loading="lazy"
+                  priority
                   referrerPolicy="no-referrer-when-downgrade"
                 />
               </motion.div>
@@ -394,7 +395,7 @@ const Contact = () => {
                     >
                       <FaXTwitter className="text-[2rem] text-[--dark]" />
                       <h4 className={` ${styles.h4} mt-2 `}>
-                        <span>Twitter</span>
+                        <span>X</span>
                       </h4>
                     </motion.a>
                   </MagneticButton>

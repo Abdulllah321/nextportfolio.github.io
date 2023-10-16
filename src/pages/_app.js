@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import "@/styles/cv.css";
 import "@/styles/globals.css";
 import "@/styles/footer.css";
@@ -9,7 +9,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import PreLoader from "@/components/PreLoader";
 
-
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-mont",
@@ -17,8 +16,6 @@ const montserrat = Montserrat({
 
 export default function App({ Component, pageProps }) {
   const [isLoading, setIsLoading] = useState(true);
-
-
 
   useEffect(() => {
     (async () => {
@@ -38,8 +35,6 @@ export default function App({ Component, pageProps }) {
 
   useEffect(() => {
     setDisplayText(pathname === "/" ? "Home" : pathname.replace("/", ""));
-
-   
   }, [pathname]);
 
   return (
@@ -54,9 +49,7 @@ export default function App({ Component, pageProps }) {
           <>
             <PreLoader />
             <Head>
-              <title>
-                Abdullah
-              </title>
+              <title>Abdullah</title>
             </Head>
           </>
         ) : (
@@ -67,31 +60,86 @@ export default function App({ Component, pageProps }) {
             <Component {...pageProps} />
             {/* Display text animation here */}
             <motion.div
-              className={`fixed bg-[--dark] w-screen h-screen mx-auto z-[1000] flex justify-center items-center`}
-              initial={{ top: "-100%" }}
-              animate={{ top: "-100%" }}
-              exit={{ top: "0%" }}
-              transition={{ duration: 1.5, ease: [0.76, 0, 0.24, 1] }}
+              className={`fixed w-screen h-screen mx-auto z-[900] flex justify-center items-center origin-top left-0 top-0 flex-col`}
+              initial={{ display: "none" }}
+              animate={{ display: "none" }}
+              exit={{ display: "block" }}
             >
-              <div className="w-4 h-4 bg-[--light] rounded-full -left-4 relative" />
-              <h1 className="text-[--light] text-8xl capitalize origin-right">
-                {displayText}
-              </h1>
+              <motion.div
+                className="w-screen h-1/2 relative bg-[--dark] z-[1000]  origin-bottom"
+                initial={{ scaleY: 0 }}
+                animate={{ scaleY: 0 }}
+                exit={{ scaleY: 1 }}
+                transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
+              >
+                <div className="top-[100%] left-1/2 absolute -translate-x-1/2 -translate-y-1/2 z-[1002] flex items-center justify-center">
+                  <div className="w-4 h-4 bg-[--light] rounded-full -left-4 relative" />
+                  <h1 className="text-[--light] text-8xl capitalize">
+                    {displayText}
+                  </h1>
+                </div>
+              </motion.div>
+              <motion.div
+                className="w-screen h-1/2 relative bg-[--dark] z-[1000] origin-top "
+                initial={{ scaleY: 0 }}
+                animate={{ scaleY: 0 }}
+                exit={{ scaleY: 1 }}
+                transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
+              >
+                <div className="top-0 left-1/2 absolute -translate-x-1/2 -translate-y-1/2 z-[1002] flex items-center justify-center">
+                  <div className="w-4 h-4 bg-[--light] rounded-full -left-4 relative" />
+                  <h1 className="text-[--light] text-8xl capitalize">
+                    {displayText}
+                  </h1>
+                </div>
+              </motion.div>
             </motion.div>
-            {/* Second display text animation here */}`{" "}
+            {/* Second display text animation here */}{" "}
             <motion.div
-              className={`fixed bg-[--dark] w-screen h-screen mx-auto z-[1000] flex justify-center items-center`}
-              initial={{ top: "0" }}
-              animate={{ top: "100%" }}
-              exit={{ top: "100%" }}
-              transition={{ duration: 1.5, ease: [0.76, 0, 0.24, 1] }}
+              className={`fixed  w-screen h-screen mx-auto z-[1000] flex justify-center items-center flex-col origin-bottom left-0 top-0 gap-[2px]`}
+              initial={{ display: "block" }}
+              animate={{ display: "none" }}
+              exit={{ display: "none" }}
+              transition={{ delay: 1.5, duration: 1, ease: [0.76, 0, 0.24, 1] }}
             >
-              <div className="w-4 h-4 bg-[--light] rounded-full -left-4 relative" />
-              <h1 className="text-[--light] text-8xl capitalize">
-                {displayText}
-              </h1>
+              <motion.div
+                className="w-screen h-1/2 relative bg-[--dark] z-[1000] overflow-hidden"
+                initial={{ left: 0 }}
+                animate={{ left: "-100%" }}
+                exit={{ left: "-100%" }}
+                transition={{
+                  duration: 1,
+                  ease: [0.76, 0, 0.24, 1],
+                  delay: 0.3,
+                }}
+              >
+                <div className="top-[100%] left-1/2 absolute -translate-x-1/2 -translate-y-1/2 z-[1002] flex items-center justify-center">
+                  <div className="w-4 h-4 bg-[--light] rounded-full -left-4 relative" />
+                  <h1 className="text-[--light] text-8xl capitalize">
+                    {displayText}
+                  </h1>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="w-screen h-1/2 relative bg-[--dark] z-[1000] overflow-hidden"
+                initial={{ left: 0 }}
+                animate={{ left: "100%" }}
+                exit={{ left: "100%" }}
+                transition={{
+                  duration: 1,
+                  ease: [0.76, 0, 0.24, 1],
+                  delay: 0.3,
+                }}
+              >
+                <div className="top-0 left-1/2 absolute -translate-x-1/2 -translate-y-1/2 z-[1002] flex items-center justify-center">
+                  <div className="w-4 h-4 bg-[--light] rounded-full -left-4 relative" />
+                  <h1 className="text-[--light] text-8xl capitalize">
+                    {displayText}
+                  </h1>
+                </div>
+              </motion.div>
             </motion.div>
-            `
           </motion.div>
         )}
       </AnimatePresence>

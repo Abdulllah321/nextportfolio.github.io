@@ -4,7 +4,7 @@ import React, { useRef, useEffect } from "react";
 import Head from "next/head";
 import Layout from "@/components/Layout";
 import Image from "next/image";
-import ProfilePic from "../../public/images/profile/developer-pic-2.jpg";
+import ProfilePic from "../../public/images/profile/developer-pic-2.jpeg";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
@@ -17,12 +17,11 @@ const AnimatedNumbers = ({ value }) => {
   const springValue = useSpring(motionValue, { duration: 3000 });
   const isInView = useInView(ref, { once: true });
 
- useEffect(() => {
-   if (isInView) {
-     motionValue.set(value);
-   }
- }, [isInView, value, motionValue]);
-
+  useEffect(() => {
+    if (isInView) {
+      motionValue.set(value);
+    }
+  }, [isInView, value, motionValue]);
 
   useEffect(() => {
     springValue.on("change", (latest) => {
@@ -42,7 +41,12 @@ const about = () => {
         <title>Abdullah || About page</title>
         <meta
           name="description"
-          content="I'm Abdullah Sufyan, a passionate MERN stack developer from Karachi, Pakistan. My web development journey started in 2022, with humble beginnings in HTML and CSS. Swiftly, I mastered these foundational technologies, crafting over ten websites and various smaller projects. My skill set covers HTML, CSS, JavaScript, Vue.js, React.js, Node.js, Express.js, MongoDB, Tailwind CSS, Sass, Next.js, Bootstrap, Framer Motion, GSAP, and ScrollTrigger. I specialize in full-stack development, managing both user interfaces and server-side logic. I'm proud of my achievements, including participation in TechWiz4, a global competition. My coding philosophy revolves around creating modernistic websites that blend stunning visuals with top-notch functionality. My goal is to continue shaping the web development landscape with exceptional user-centric designs and seamless functionality. This biography captures my journey, skills, and aspirations as a web developer. I'm eager to keep pushing the boundaries of web development and design, creating impactful digital experiences."
+          content="Abdullah Sufyan, a passionate MERN stack developer from Karachi, Pakistan, specializes in full-stack development. Proficient in HTML, CSS, JavaScript, Vue.js, React.js, Node.js, Express.js, MongoDB, and more. With a focus on stunning visuals and functionality, Abdullah aims to shape exceptional user-centric web designs. He's proud of his achievements, including participation in TechWiz4. Join him on his web development journey!"
+        />
+
+        <meta
+          name="description"
+          content="On a web development journey, meet Abdullah Sufyan, a MERN stack developer from Karachi. Skills include HTML, CSS, React.js, and more. Proudly participated in TechWiz4. Join him!"
         />
       </Head>
 
@@ -123,7 +127,7 @@ const about = () => {
           </div>
           <Skills />
           <Experience />
-          <div className="slidersOfImages z-[100] w-full">
+          <div className="slidersOfImages z-[100] !w-[100vw]">
             <Education />
           </div>
         </main>

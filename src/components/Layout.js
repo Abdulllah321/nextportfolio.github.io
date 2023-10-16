@@ -7,7 +7,7 @@ import Cursor from "@/components/Cursor";
 const Layout = ({ children, className = "" }) => {
   return (
     <div
-      className={`w-full h-full inline-block z-0 bg-[--light] ${className}  transition-all duration-300 ease-out  `}
+      className={`w-full h-full inline-block bg-[--light] ${className}  transition-all duration-300 ease-out z-20 `}
     >
       <Cursor />
       <Navbar />

@@ -190,7 +190,7 @@ const CV = () => {
 
     // Second Animation
     gsap.from(".cvDetails h1", {
-      y: 500,
+      y: 700,
       opacity: 0,
     });
 
@@ -259,7 +259,7 @@ const CV = () => {
           </div> 
         </div>*/}
         <div className="absolute top-0 w-full h-full m-auto text-center z-30 flex items-center justify-center flex-col cvDetails p-4">
-          <h1 className="text-light text-[3rem] mb-6 font-bold xs:text-[2rem] ">
+          <h1 className="text-light text-[3rem] mb-6 font-bold xs:text-[2rem] opacity-0">
             Abdullah Sufyan
           </h1>
           <p className="text-light text-left ml-3 xs:line-clamp-[10] ">
