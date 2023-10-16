@@ -1,16 +1,18 @@
 import html from "./assets/html.png";
 import css from "./assets/css.png";
 import javascript from "./assets/javascript.png";
-import typescript from "./assets/typescript.png";
 import reactjs from "./assets/reactjs.png";
 import redux from "./assets/redux.png";
 import tailwind from "./assets/tailwind.png";
 import nodejs from "./assets/nodejs.png";
 import mongodb from "./assets/mongodb.png";
-import threejs from "./assets/threejs.svg";
 import git from "./assets/git.png";
 import figma from "./assets/figma.png";
-import docker from "./assets/docker.png";
+import bootstrap from "./assets/bootstrap.png"
+import express from "./assets/express-removebg-preview.png"
+import next from "./assets/nextjs.png"
+import gsap from "./assets/gsap.png"
+import framer from "./assets/framer-motion.png"
 
 const technologies = [
   {
@@ -26,16 +28,8 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
     name: "React JS",
     icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
   },
   {
     name: "Tailwind CSS",
@@ -46,12 +40,12 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "ExpressJs",
+    icon: express,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "MongoDB",
+    icon: mongodb,
   },
   {
     name: "git",
@@ -62,8 +56,20 @@ const technologies = [
     icon: figma,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "bootstrap",
+    icon: bootstrap,
+  },
+  {
+    name: "NextJs",
+    icon: next,
+  },
+  {
+    name: "Gsap",
+    icon: gsap,
+  },
+  {
+    name: "Framer-motion",
+    icon: framer,
   },
 ];
 

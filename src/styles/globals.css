@@ -273,83 +273,91 @@ body {
 }
 
 .skill li:nth-child(1) {
-  transform: rotate(calc(360deg / 13 * (1 - 1)));
+  transform: rotate(calc(360deg / 14 * (1 - 1)));
 }
 .skill li:nth-child(2) {
-  transform: rotate(calc(360deg / 13 * (2 - 1)));
+  transform: rotate(calc(360deg / 14 * (2 - 1)));
 }
 .skill li:nth-child(3) {
-  transform: rotate(calc(360deg / 13 * (3 - 1)));
+  transform: rotate(calc(360deg / 14 * (3 - 1)));
 }
 .skill li:nth-child(4) {
-  transform: rotate(calc(360deg / 13 * (4 - 1)));
+  transform: rotate(calc(360deg / 14 * (4 - 1)));
 }
 .skill li:nth-child(5) {
-  transform: rotate(calc(360deg / 13 * (5 - 1)));
+  transform: rotate(calc(360deg / 14 * (5 - 1)));
 }
 .skill li:nth-child(6) {
-  transform: rotate(calc(360deg / 13 * (6 - 1)));
+  transform: rotate(calc(360deg / 14 * (6 - 1)));
 }
 .skill li:nth-child(7) {
-  transform: rotate(calc(360deg / 13 * (7 - 1)));
+  transform: rotate(calc(360deg / 14 * (7 - 1)));
 }
 .skill li:nth-child(8) {
-  transform: rotate(calc(360deg / 13 * (8 - 1)));
+  transform: rotate(calc(360deg / 14 * (8 - 1)));
 }
 .skill li:nth-child(9) {
-  transform: rotate(calc(360deg / 13 * (9 - 1)));
+  transform: rotate(calc(360deg / 14 * (9 - 1)));
 }
 .skill li:nth-child(10) {
-  transform: rotate(calc(360deg / 13 * (10 - 1)));
+  transform: rotate(calc(360deg / 14 * (10 - 1)));
 }
 .skill li:nth-child(11) {
-  transform: rotate(calc(360deg / 13 * (11 - 1)));
+  transform: rotate(calc(360deg / 14 * (11 - 1)));
 }
 .skill li:nth-child(12) {
-  transform: rotate(calc(360deg / 13 * (12 - 1)));
+  transform: rotate(calc(360deg / 14 * (12 - 1)));
 }
 .skill li:nth-child(13) {
-  transform: rotate(calc(360deg / 13 * (13 - 1)));
+  transform: rotate(calc(360deg / 14 * (13 - 1)));
+}
+.skill li:nth-child(14) {
+  transform: rotate(calc(360deg / 14 * (14 - 1)));
 }
 
 .skill li:nth-child(1) div img {
-  transform: rotate(calc(-360deg / 13 * (1 - 1)));
+  transform: rotate(calc(-360deg / 14 * (1 - 1)));
 }
 .skill li:nth-child(2) div img {
-  transform: rotate(calc(-360deg / 13 * (2 - 1)));
+  transform: rotate(calc(-360deg / 14 * (2 - 1)));
 }
 .skill li:nth-child(3) div img {
-  transform: rotate(calc(-360deg / 13 * (3 - 1)));
+  transform: rotate(calc(-360deg / 14 * (3 - 1)));
 }
 .skill li:nth-child(4) div img {
-  transform: rotate(calc(-360deg / 13 * (4 - 1)));
+  transform: rotate(calc(-360deg / 14 * (4 - 1)));
 }
 .skill li:nth-child(5) div img {
-  transform: rotate(calc(-360deg / 13 * (5 - 1)));
+  transform: rotate(calc(-360deg / 14 * (5 - 1)));
 }
 .skill li:nth-child(6) div img {
-  transform: rotate(calc(-360deg / 13 * (6 - 1)));
+  transform: rotate(calc(-360deg / 14 * (6 - 1)));
 }
 .skill li:nth-child(7) div img {
-  transform: rotate(calc(-360deg / 13 * (7 - 1)));
+  transform: rotate(calc(-360deg / 14 * (7 - 1)));
 }
 .skill li:nth-child(8) div img {
-  transform: rotate(calc(-360deg / 13 * (8 - 1)));
+  transform: rotate(calc(-360deg / 14 * (8 - 1)));
 }
 .skill li:nth-child(9) div img {
-  transform: rotate(calc(-360deg / 13 * (9 - 1)));
+  transform: rotate(calc(-360deg / 14 * (9 - 1)));
 }
 .skill li:nth-child(10) div img {
-  transform: rotate(calc(-360deg / 13 * (10 - 1)));
+  transform: rotate(calc(-360deg / 14 * (10 - 1)));
 }
 .skill li:nth-child(11) div img {
-  transform: rotate(calc(-360deg / 13 * (11 - 1)));
+  transform: rotate(calc(-360deg / 14 * (11 - 1)));
 }
 .skill li:nth-child(12) div img {
-  transform: rotate(calc(-360deg / 13 * (12 - 1)));
+  transform: rotate(calc(-360deg / 14 * (12 - 1)));
 }
 .skill li:nth-child(13) div img {
-  transform: rotate(calc(-360deg / 13 * (13 - 1)));
+  transform: rotate(calc(-360deg / 14 * (13 - 1)));
+}
+.skill li:nth-child(14) div img {
+  transform: rotate(calc(-360deg / 14 * (14 - 1)));
+  width: 80%;
+  height: 80%;
 }
 
 ::-webkit-scrollbar {
@@ -423,13 +431,12 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-  .toggle{
+  .toggle {
     width: 100px;
     height: 100px;
-      font-size: 15px;
-
+    font-size: 15px;
   }
-  .ball{
+  .ball {
     width: 5rem;
     height: 5rem;
   }
