@@ -3,35 +3,15 @@ import { motion } from "framer-motion";
 import { CircularText } from "./Icons";
 import Link from "next/link";
 import MagneticButton from "./MagneticButton";
-
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 const HireMe = () => {
-  const [scrollDown, setScrollDown] = useState(false);
-  const lastScrollY = useRef(0);
+  const firstText = useRef(null);
+  const slider = useRef(null);
+  let rotation = 0;
+  let direction = -1;
 
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY;
-    const scrollDelta = currentScrollY - lastScrollY.current;
-    lastScrollY.current = currentScrollY;
-
-    if (scrollDelta < 0) {
-      setScrollDown(false);
-    } else if (scrollDelta > 0) {
-      setScrollDown(true);
-    }
-  };
-
-  useEffect(() => {
-      window.addEventListener("scroll", handleScroll);
-
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    
-  }, []);
-
-  
   const Hire = {
-    
     initial: {
       opacity: 0,
       x: -100,
@@ -55,29 +35,30 @@ const HireMe = () => {
     },
   };
 
-  const Circle = {
-    animate: {
-      rotate: -360,
-      transition: {
-        repeat: Infinity,
-        ease: "linear",
-        duration: 7,
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(slider.current, {
+      scrollTrigger: {
+        trigger: document.documentElement,
+        scrub: 0.25,
+        start: "0% top",
+        end: "580% bottom",
+        onUpdate: (e) => (direction = e.direction * -1),
+        // markers: true,
       },
-    },
-  };
+    });
+    requestAnimationFrame(animate);
+  }, []);
 
-  const Circle1 = {
-    animate: {
-      rotate: 360,
-      transition: {
-        repeat: Infinity,
-        ease: "linear",
-        duration: 7,
-      },
-    },
-  };
+  const animate = () => {
+    if (rotation >= 360) {
+      rotation = 0;
+    }
 
-  const circleVariant = scrollDown ? Circle1 : Circle;
+    gsap.set(firstText.current, { rotation: rotation });
+    requestAnimationFrame(animate);
+    rotation += 1 * direction;
+  };
 
   return (
     <MagneticButton>
@@ -89,14 +70,11 @@ const HireMe = () => {
           transition="transition"
           variants={Hire}
         >
-          <motion.div
-            variants={circleVariant}
-            initial="initial"
-            animate="animate"
-            transition="transition"
-          >
-            <CircularText className={`fill-[--dark] mix-blend-difference`} />
-          </motion.div>
+          <div ref={slider}>
+            <motion.div ref={firstText}>
+              <CircularText className={`fill-[--dark] mix-blend-difference`} />
+            </motion.div>
+          </div>
           <Link
             href={`/contact`}
             className="flex items-center justify-center text-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[--dark] text-[--light] shadow-md border-2 transition-all duration-300 ease-in-out border-solid border-[--dark] w-[4.5rem] h-[4.5rem] rounded-full font-semibold hover:bg-[--light] hover:text-[--dark] text-[.9rem] p-1 sm:w-[3.2rem] sm:h-[3.2rem] sm:text-[.6rem] mix-blend-difference"

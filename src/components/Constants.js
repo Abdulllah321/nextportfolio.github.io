@@ -8,11 +8,11 @@ import nodejs from "./assets/nodejs.png";
 import mongodb from "./assets/mongodb.png";
 import git from "./assets/git.png";
 import figma from "./assets/figma.png";
-import bootstrap from "./assets/bootstrap.png"
-import express from "./assets/express-removebg-preview.png"
-import next from "./assets/nextjs.png"
-import gsap from "./assets/gsap.png"
-import framer from "./assets/framer-motion.png"
+import bootstrap from "./assets/bootstrap.png";
+import express from "./assets/express-removebg-preview.png";
+import next from "./assets/nextjs.png";
+import gsap from "./assets/gsap.png";
+import framer from "./assets/framer-motion.png";
 
 const technologies = [
   {
@@ -77,109 +77,119 @@ export { technologies };
 
 const laptop = "/video/laptop.mp4";
 
+const duoStudio = "/video/duo-studio.mp4";
+const mediaLab = "/video/mediaLab.mp4";
+const multiMart = "/video/multimart.mp4";
+const plantPalace = "/video/plant palace.mp4";
+const portfolio = "/video/portfolio.mp4";
+const starOrganic = "/video/star-organic.mp4";
+const waveCafe = "/video/wave-cafe.webm";
+const webCommerce = "/video/web-commerce.mp4";
+const zelt = "/video/zelt.mp4";
+
 export const projectVideos = [
   {
     id: 1,
-    src: "/video/wave-cafe.webm",
-    href: "https://abd-wavecafe.netlify.app/",
+    src: duoStudio,
+    ssrc: duoStudio,
+    href: "https://abd-duo-studio.netlify.app/",
     laptop: laptop,
-    type: "video/webm",
-    title: "wave-cafe",
+    type: "video/mp4",
+    title: "Duo Studio",
     description:
-      "This project is a Bootstrap-based replica of Wave Cafe's user interface, with no backend functionality",
+      "Explore Duo Studio, an animated website landing page. For the best experience, visit this page on a screen with a width of 1280 pixels. It's a replica of the Duo-Studio website.",
   },
   {
     id: 2,
-    src: "/video/wave-cafe.webm",
-    href: "https://abd-wavecafe.netlify.app/",
+    src: zelt,
+    ssrc: zelt,
+    href: "https://abd-zelt.netlify.app/",
     laptop: laptop,
-    type: "video/webm",
-    title: "wave-cafe",
+    type: "video/mp4",
+    title: "Zelt",
     description:
-      "This project is a Bootstrap-based replica of Wave Cafe's user interface, with no backend functionality",
+      "Discover Zelt, an engaging web experience. For optimal viewing, access this landing page on a screen with a width of 1280 pixels. It's a replica of the zelt.app website.",
   },
   {
     id: 3,
-    src: "/video/wave-cafe.webm",
-    href: "https://abd-wavecafe.netlify.app/",
+    src: multiMart,
+    ssrc: multiMart,
+    href: "https://abdullahmart.netlify.app/",
     laptop: laptop,
-    type: "video/webm",
-    title: "wave-cafe",
+    type: "video/mp4",
+    title: "Abdullah Mart",
     description:
-      "This project is a Bootstrap-based replica of Wave Cafe's user interface, with no backend functionality",
+      "Abdullah Mart is a dynamic React project with a wide range of functionalities.",
   },
   {
     id: 4,
-    src: "/video/wave-cafe.webm",
-    href: "https://abd-wavecafe.netlify.app/",
+    src: mediaLab,
+    ssrc: mediaLab,
+    href: "https://abd-medialab.netlify.app/",
     laptop: laptop,
-    type: "video/webm",
-    title: "wave-cafe",
+    type: "video/mp4",
+    title: "MarketBuilder",
     description:
-      "This project is a Bootstrap-based replica of Wave Cafe's user interface, with no backend functionality",
+      "MarketBuilder is a Bootstrap-based replica of the MediaLab user interface, focusing on the frontend. It doesn't have backend functionality.",
   },
 
   {
     id: 5,
-    src: "/video/wave-cafe.webm",
-    href: "https://abd-wavecafe.netlify.app/",
+    src: plantPalace,
+    ssrc: plantPalace,
+    href: "https://abd-plant-palace.netlify.app/",
     laptop: laptop,
-    type: "video/webm",
-    title: "wave-cafe",
+    type: "video/mp4",
+    title: "Plant Palace",
     description:
-      "This project is a Bootstrap-based replica of Wave Cafe's user interface, with no backend functionality",
+      "Plant Palace is a project centered around plants. It was created for a global competition from scratch.",
   },
 
   {
     id: 6,
-    src: "/video/wave-cafe.webm",
-    href: "https://abd-wavecafe.netlify.app/",
+    src: portfolio,
+    ssrc: portfolio,
+    href: "https://abdullah2007.netlify.app/",
     laptop: laptop,
-    type: "video/webm",
-    title: "wave-cafe",
+    type: "video/mp4",
+    title: "Portfolio",
     description:
-      "This project is a Bootstrap-based replica of Wave Cafe's user interface, with no backend functionality",
+      "My personal portfolio, a project designed by me to showcase my work and skills.",
   },
   {
     id: 7,
-    src: "/video/wave-cafe.webm",
+    src: waveCafe,
+    ssrc: waveCafe,
     href: "https://abd-wavecafe.netlify.app/",
     laptop: laptop,
     type: "video/webm",
-    title: "wave-cafe",
+    title: "wave cafe",
     description:
-      "This project is a Bootstrap-based replica of Wave Cafe's user interface, with no backend functionality",
+      "Wave Cafe is a Bootstrap-based replica of the Wave Cafe user interface, emphasizing frontend design without backend functionality.",
   },
 
   {
     id: 8,
-    src: "/video/wave-cafe.webm",
-    href: "https://abd-wavecafe.netlify.app/",
+    src: starOrganic,
+    ssrc: starOrganic,
+    href: "https://abd-starorganic.netlify.app",
     laptop: laptop,
-    type: "video/webm",
-    title: "wave-cafe",
+    type: "video/mp4",
+    title: "Star organic",
     description:
-      "This project is a Bootstrap-based replica of Wave Cafe's user interface, with no backend functionality",
+      "Star Organic is a project designed from the ground up, created based on specific requirements.",
   },
+
   {
     id: 9,
-    src: "/video/wave-cafe.webm",
-    href: "https://abd-wavecafe.netlify.app/",
+    src: webCommerce,
+    ssrc: webCommerce,
+    href: "https://abd-ecommerceweb.netlify.app",
     laptop: laptop,
-    type: "video/webm",
-    title: "wave-cafe",
+    type: "video/mp4",
+    title: "E-commerce Web",
     description:
-      "This project is a Bootstrap-based replica of Wave Cafe's user interface, with no backend functionality",
-  },
-  {
-    id: 10,
-    src: "/video/wave-cafe.webm",
-    href: "https://abd-wavecafe.netlify.app/",
-    laptop: laptop,
-    type: "video/webm",
-    title: "wave-cafe",
-    description:
-      "This project is a Bootstrap-based replica of Wave Cafe's user interface, with no backend functionality",
+      "The E-commerce Web project marks my first web design experience.",
   },
 ];
 

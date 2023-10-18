@@ -127,7 +127,7 @@ const about = () => {
           </div>
           <Skills />
           <Experience />
-          <div className="slidersOfImages z-[100] !w-[100vw]">
+          <div className="slidersOfImages z-[100] !w-[90vw]">
             <Education />
           </div>
         </main>

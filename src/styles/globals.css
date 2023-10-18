@@ -43,6 +43,12 @@ body {
   margin: auto;
 }
 
+::selection {
+  background: transparent;
+  text-shadow: 2px 7px 5px var(--darkLight),
+    0px -4px 10px rgba(255, 255, 255, 0.3);
+}
+
 .svg {
   position: absolute;
   top: 0;

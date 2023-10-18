@@ -54,7 +54,7 @@ export default function SlidingImages() {
     gsap.set(firstText.current, { xPercent: xPercent });
     gsap.set(secondText.current, { xPercent: xPercent });
     requestAnimationFrame(animate);
-    xPercent += 0.02 * direction;
+    xPercent += 0.01 * direction;
   };
   
   return (

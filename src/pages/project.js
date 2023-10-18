@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import styles from "@/styles/project.module.scss";
 import Link from "next/link";
@@ -19,6 +19,8 @@ const createLaptopVideoRefs = () => {
 const Projects = () => {
   const projectVideoRefs = useRef([]);
   const laptopVideoRefsArray = createLaptopVideoRefs();
+  const videoRef = useRef(null);
+
 
   useEffect(() => {
     projectVideos.forEach((projectVideo, index) => {
@@ -48,6 +50,7 @@ const Projects = () => {
     });
   }, [laptopVideoRefsArray]);
 
+  
   return (
     <>
       <Head>
@@ -65,7 +68,9 @@ const Projects = () => {
             />
             {projectVideos.map((projectVideo, index) => (
               <div key={projectVideo.id} className={styles.mainProject}>
-                <div className={styles.videos}>
+                <div
+                  className={styles.videos}
+                >
                   <div className={styles.laptop}>
                     <video ref={laptopVideoRefsArray[index]} autoPlay muted>
                       <source src={projectVideo.laptop} type="video/mp4" />
@@ -77,7 +82,7 @@ const Projects = () => {
                       className={styles.projectVideo}
                       initial={{ opacity: 0 }}
                     >
-                      <video autoPlay loop muted>
+                      <video autoPlay loop muted ref={videoRef}>
                         <source
                           src={projectVideo.src}
                           type={projectVideo.type}
@@ -103,6 +108,7 @@ const Projects = () => {
                 </div>
               </div>
             ))}
+  
           </main>
         </div>
       </Layout>

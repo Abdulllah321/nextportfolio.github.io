@@ -63,7 +63,7 @@ export default function PreLoader() {
       {dimension.width > 0 && (
         <>
           <motion.p initial="initial" animate="enter">
-            <span></span>
+            <div className="w-4 h-4 bg-[--light] rounded-full -left-4 relative" />
             {words[index]}
           </motion.p>
           <svg>
