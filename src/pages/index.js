@@ -136,7 +136,7 @@ export default function Home() {
               </div>
             </div>
             </div>
-            <div className="relative lg:hidden bottom-20 w-full flex justify-center items-center">
+            <div className="absolute lg:hidden bottom-14 w-full flex justify-center items-center ">
                 <div className="w-[35px] h-[64px] rounded-3xl border-4 border-[--dark] flex justify-center items-start p-2">
                   <motion.div
                     animate={{
