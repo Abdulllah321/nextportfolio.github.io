@@ -68,22 +68,29 @@ const Footer = () => {
                     <h2>Social</h2>
                   </li>
                   <li>
-                    <a href="#">Twitter</a>
+                    <a
+                      href="https://twitter.com/itsmeabdullah14/"
+                      target="_blank"
+                    >
+                      Twitter
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Github</a>
+                    <a href="https://github.com/Abdulllah321/">Github</a>
                   </li>
                   <li>
                     <a href="#">Facebook</a>
                   </li>
                   <li>
-                    <a href="#">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/abdullah-sufyan-2a1665297/">
+                      LinkedIn
+                    </a>
                   </li>
                   <li>
                     <a href="#">Pinterest</a>
                   </li>
                   <li>
-                    <a href="#">Dribble</a>
+                    <a href="https://dribbble.com/abdullah987">Dribble</a>
                   </li>
                 </ul>
               </div>

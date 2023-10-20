@@ -227,7 +227,7 @@ const Contact = () => {
                 <nav className="flex items-start justify-around flex-wrap gap-x-32 gap-y-8 mt-4">
                   <MagneticButton>
                     <motion.a
-                      href="https://twitter.com"
+                      href="https://twitter.com/itsmeabdullah14"
                       target={"_blank"}
                       className={`w-8 flex flex-col items-center ${styles.an} `}
                     >

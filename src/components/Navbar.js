@@ -104,7 +104,7 @@ const Navbar = () => {
           <nav className="flex items-center flex-wrap gap-1">
             <div className="flex items-center justify-center lg:hidden">
               <motion.a
-                href="https://twitter.com"
+                href="https://twitter.com/itsmeabdullah14"
                 target={"_blank"}
                 className="w-6 mr-3 m-6 text-[--dark] "
                 whileHover={{ y: -5 }}
@@ -119,7 +119,7 @@ const Navbar = () => {
                 <FaXTwitter className="text-[1.5rem]" />
               </motion.a>
               <motion.a
-                href="https://twitter.com"
+                href="https://github.com/Abdulllah321/"
                 target={"_blank"}
                 className="w-6 mx-3 m-6 text-[--dark] "
                 whileHover={{ y: -5 }}
@@ -134,7 +134,7 @@ const Navbar = () => {
                 <AiFillGithub className="text-[1.5rem]" />
               </motion.a>
               <motion.a
-                href="https://twitter.com"
+                href="https://www.linkedin.com/in/abdullah-sufyan-2a1665297/"
                 target={"_blank"}
                 className="w-6 mx-3 m-6 text-[--dark] "
                 whileHover={{ y: -5 }}
@@ -179,7 +179,7 @@ const Navbar = () => {
                 <PinterestIcon />
               </motion.a>
               <motion.a
-                href="https://twitter.com"
+                href="https://dribbble.com/abdullah987"
                 target={"_blank"}
                 className="w-6 mx-3 m-6 text-[--dark] "
                 whileHover={{ y: -5 }}
@@ -244,7 +244,7 @@ const Navbar = () => {
             <nav className="flex items-center justify-center flex-wrap gap-1 ">
               <div className="flex items-center justify-center ">
                 <motion.a
-                  href="https://twitter.com"
+                  href="https://twitter.com/itsmeabdullah14"
                   target={"_blank"}
                   className="w-6 mr-3 m-6 text-[--light] sm:mx-1 "
                   whileHover={{ y: -5 }}
@@ -259,7 +259,7 @@ const Navbar = () => {
                   <FaXTwitter className="text-[1.5rem]" />
                 </motion.a>
                 <motion.a
-                  href="https://twitter.com"
+                  href="https://github.com/Abdulllah321/"
                   target={"_blank"}
                   className="w-6 mx-3 m-6 text-[--light] sm:mx-1 "
                   whileHover={{ y: -5 }}
@@ -289,7 +289,7 @@ const Navbar = () => {
                   <BsFacebook className="text-[1.5rem]" />
                 </motion.a>
                 <motion.a
-                  href="https://twitter.com"
+                  href="https://www.linkedin.com/in/abdullah-sufyan-2a1665297/"
                   target={"_blank"}
                   className="w-6 mx-3 m-6 text-[--dark] sm:mx-1 "
                   whileHover={{ y: -5 }}
@@ -319,7 +319,7 @@ const Navbar = () => {
                   <PinterestIcon />
                 </motion.a>
                 <motion.a
-                  href="https://twitter.com"
+                  href="https://dribbble.com/abdullah987"
                   target={"_blank"}
                   className="w-6 mx-3 m-6 text-[--dark] sm:mx-1 "
                   whileHover={{ y: -5 }}

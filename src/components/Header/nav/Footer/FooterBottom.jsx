@@ -14,7 +14,7 @@ const FooterBottom = () => {
     <div>
       <nav className="flex items-center justify-center flex-wrap gap-1">
         <motion.a
-          href="https://twitter.com"
+          href="https://twitter.com/itsmeabdullah14"
           target={"_blank"}
           className="w-6 mr-3 m-6 "
           whileHover={{ y: -5 }}
@@ -29,7 +29,7 @@ const FooterBottom = () => {
           <FaXTwitter className="text-[1.5rem]" />
         </motion.a>
         <motion.a
-          href="https://twitter.com"
+          href="https://github.com/Abdulllah321/"
           target={"_blank"}
           className="w-6 mx-3 m-6 "
           whileHover={{ y: -5 }}
@@ -44,7 +44,7 @@ const FooterBottom = () => {
           <GithubIcon />
         </motion.a>
         <motion.a
-          href="https://twitter.com"
+          href="https://www.linkedin.com/in/abdullah-sufyan-2a1665297/"
           target={"_blank"}
           className="w-6 mx-3 m-6 "
           whileHover={{ y: -5 }}
@@ -89,7 +89,7 @@ const FooterBottom = () => {
           <PinterestIcon />
         </motion.a>
         <motion.a
-          href="https://twitter.com"
+          href="https://dribbble.com/abdullah987"
           target={"_blank"}
           className="w-6 mx-3 m-6 "
           whileHover={{ y: -5 }}
