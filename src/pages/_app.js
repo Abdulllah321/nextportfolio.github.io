@@ -106,7 +106,7 @@ export default function App({ Component, pageProps }) {
               >
                 <div className="top-[100%] left-1/2 absolute -translate-x-1/2 -translate-y-1/2 z-[1002] flex items-center justify-center">
                   <div className="w-4 h-4 bg-[--light] rounded-full -left-4 relative" />
-                  <h1 className="text-[--light] text-8xl capitalize lg:text-7xl md:text:6xl  ">
+                  <h1 className="text-[--light] text-8xl capitalize lg:text-7xl md:text:6xl sm:text-5xl  ">
                     {" "}
                     {displayText}
                   </h1>
@@ -121,7 +121,7 @@ export default function App({ Component, pageProps }) {
               >
                 <div className="top-0 left-1/2 absolute -translate-x-1/2 -translate-y-1/2 z-[1002] flex items-center justify-center">
                   <div className="w-4 h-4 bg-[--light] rounded-full -left-4 relative" />
-                  <h1 className="text-[--light] text-8xl capitalize lg:text-7xl md:text:6xl ">
+                  <h1 className="text-[--light] text-8xl capitalize lg:text-7xl md:text:6xl sm:text-5xl">
                     {" "}
                     {displayText}
                   </h1>
@@ -149,7 +149,7 @@ export default function App({ Component, pageProps }) {
               >
                 <div className="top-[100%] left-1/2 absolute -translate-x-1/2 -translate-y-1/2 z-[1002] flex items-center justify-center">
                   <div className="w-4 h-4 bg-[--light] rounded-full -left-4 relative" />
-                  <h1 className="text-[--light] text-8xl capitalize lg:text-7xl md:text:6xl  ">
+                  <h1 className="text-[--light] text-8xl capitalize lg:text-7xl md:text:6xl sm:text-5xl">
                     {" "}
                     {displayText}
                   </h1>
@@ -169,7 +169,7 @@ export default function App({ Component, pageProps }) {
               >
                 <div className="top-0 left-1/2 absolute -translate-x-1/2 -translate-y-1/2 z-[1002] flex items-center justify-center">
                   <div className="w-4 h-4 bg-[--light] rounded-full -left-4 relative" />
-                  <h1 className="text-[--light] text-8xl capitalize lg:text-7xl md:text:6xl ">
+                  <h1 className="text-[--light] text-8xl capitalize lg:text-7xl md:text:6xl sm:text-5xl">
                     {displayText}
                   </h1>
                 </div>
