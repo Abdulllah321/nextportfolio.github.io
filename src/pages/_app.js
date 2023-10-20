@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import PreLoader from "@/components/PreLoader";
-import ogImage from "../../public/ogImge.png"
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -56,7 +55,7 @@ export default function App({ Component, pageProps }) {
           property="og:description"
           content="Meet Abdullah Sufyan, a skilled web developer from Karachi, Pakistan. With expertise in HTML, CSS, JavaScript, Vue.js, React.js, Node.js, Express.js, MongoDB, and more, he excels in full-stack development. Abdullah's passion is creating web designs that blend striking visuals with seamless functionality. Join him on his journey through the world of web development, where user-centric designs make a lasting impact."
         />
-        <meta property="og:image" content={ogImage} />
+        <meta property="og:image" content="../../public/ogImge.png" />
         <meta property="og:url" content="https://abdullahsufyan.vercel.app/" />
 
         <meta property="og:site_name" content="Abdullah Sufyan" />
@@ -70,7 +69,7 @@ export default function App({ Component, pageProps }) {
           property="twitter:description"
           content="Meet Abdullah Sufyan, a skilled web developer from Karachi, Pakistan. With expertise in HTML, CSS, JavaScript, Vue.js, React.js, Node.js, Express.js, MongoDB, and more, he excels in full-stack development. Abdullah's passion is creating web designs that blend striking visuals with seamless functionality. Join him on his journey through the world of web development, where user-centric designs make a lasting impact."
         />
-        <meta property="twitter:image" content={ogImage} />
+        <meta property="twitter:image" content="../../public/ogImge.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="google" content="notranslate" />
         <meta
