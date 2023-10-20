@@ -85,6 +85,11 @@ shuffledProjectVideos.forEach((project, index) => {
               text="Projects"
               className="text-[5rem] my-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:my-8"
             />
+            <h3 className="text-[--dark] max-w-[1280px] mx-auto text-center pt-8">
+              ⚡ Please Wait: This Page Is Loading Content We're preparing
+              something great for you, but it might take a moment to load.
+              Thanks for your patience!
+            </h3>
             {shuffledProjectVideos.map((projectVideo, index) => (
               <div key={projectVideo.id} className={styles.mainProject}>
                 <div className={styles.videos}>
@@ -126,7 +131,6 @@ shuffledProjectVideos.forEach((project, index) => {
               </div>
             ))}
           </main>
-            <h3 className="text-[--dark] max-w-[1280px] mx-auto text-center pt-8"><b>Note: </b>Please Reload the page if all content is not loaded</h3>
         </div>
       </Layout>
     </>
