@@ -16,14 +16,28 @@ const createLaptopVideoRefs = () => {
   });
 };
 
+const shuffleArray = (array) => {
+  const shuffledArray = [...array];
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
+};
+
 const Projects = () => {
   const projectVideoRefs = useRef([]);
   const laptopVideoRefsArray = createLaptopVideoRefs();
   const videoRef = useRef(null);
+  const shuffledProjectVideos = shuffleArray(projectVideos);
 
+shuffledProjectVideos.forEach((project, index) => {
+  project.id = index
+});
 
   useEffect(() => {
-    projectVideos.forEach((projectVideo, index) => {
+    // Use shuffledProjectVideos instead of projectVideos here
+    shuffledProjectVideos.forEach((projectVideo, index) => {
       const laptopVideoRef = laptopVideoRefsArray[index].current;
       const projectVideoRef = projectVideoRefs.current[projectVideo.id];
 
@@ -36,6 +50,7 @@ const Projects = () => {
         const liveProjectElement = mainProjectElement.querySelector(
           ".project_liveProject__Zcjly"
         );
+
         if (liveProjectElement) {
           gsap.to(liveProjectElement, {
             top: 0,
@@ -47,14 +62,18 @@ const Projects = () => {
       };
 
       laptopVideoRef.addEventListener("ended", handleLaptopVideoEnd);
+
+      return () => {
+        laptopVideoRef.removeEventListener("ended", handleLaptopVideoEnd);
+      };
     });
   }, [laptopVideoRefsArray]);
 
-  
+
   return (
     <>
       <Head>
-        <title>Abdullah || Project page</title>
+        <title>Abdullah Sufyan || Project </title>
         <meta name="description" content="mydescription" />
       </Head>
       <Layout className="p-0 pt-0 z-[100] relative">
@@ -66,11 +85,9 @@ const Projects = () => {
               text="Projects"
               className="text-[5rem] my-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:my-8"
             />
-            {projectVideos.map((projectVideo, index) => (
+            {shuffledProjectVideos.map((projectVideo, index) => (
               <div key={projectVideo.id} className={styles.mainProject}>
-                <div
-                  className={styles.videos}
-                >
+                <div className={styles.videos}>
                   <div className={styles.laptop}>
                     <video ref={laptopVideoRefsArray[index]} autoPlay muted>
                       <source src={projectVideo.laptop} type="video/mp4" />
@@ -108,8 +125,8 @@ const Projects = () => {
                 </div>
               </div>
             ))}
-  
           </main>
+            <h3 className="text-[--dark] max-w-[1280px] mx-auto text-center pt-8"><b>Note: </b>Please Reload the page if all content is not loaded</h3>
         </div>
       </Layout>
     </>

@@ -86,10 +86,11 @@ const starOrganic = "/video/star-organic.mp4";
 const waveCafe = "/video/wave-cafe.webm";
 const webCommerce = "/video/web-commerce.mp4";
 const zelt = "/video/zelt.mp4";
+const carvan = "/video/carvan.mp4";
 
 export const projectVideos = [
   {
-    id: 1,
+    //id: 1,
     src: duoStudio,
     ssrc: duoStudio,
     href: "https://abd-duo-studio.netlify.app/",
@@ -100,7 +101,7 @@ export const projectVideos = [
       "Explore Duo Studio, an animated website landing page. For the best experience, visit this page on a screen with a width of 1280 pixels. It's a replica of the Duo-Studio website.",
   },
   {
-    id: 2,
+    //id: 2,
     src: zelt,
     ssrc: zelt,
     href: "https://abd-zelt.netlify.app/",
@@ -111,7 +112,7 @@ export const projectVideos = [
       "Discover Zelt, an engaging web experience. For optimal viewing, access this landing page on a screen with a width of 1280 pixels. It's a replica of the zelt.app website.",
   },
   {
-    id: 3,
+    //id: 3,
     src: multiMart,
     ssrc: multiMart,
     href: "https://abdullahmart.netlify.app/",
@@ -122,7 +123,7 @@ export const projectVideos = [
       "Abdullah Mart is a dynamic React project with a wide range of functionalities.",
   },
   {
-    id: 4,
+    //id: 4,
     src: mediaLab,
     ssrc: mediaLab,
     href: "https://abd-medialab.netlify.app/",
@@ -134,7 +135,7 @@ export const projectVideos = [
   },
 
   {
-    id: 5,
+    //id: 5,
     src: plantPalace,
     ssrc: plantPalace,
     href: "https://abd-plant-palace.netlify.app/",
@@ -146,7 +147,7 @@ export const projectVideos = [
   },
 
   {
-    id: 6,
+    //id: 6,
     src: portfolio,
     ssrc: portfolio,
     href: "https://abdullah2007.netlify.app/",
@@ -157,7 +158,7 @@ export const projectVideos = [
       "My personal portfolio, a project designed by me to showcase my work and skills.",
   },
   {
-    id: 7,
+    //id: 7,
     src: waveCafe,
     ssrc: waveCafe,
     href: "https://abd-wavecafe.netlify.app/",
@@ -169,7 +170,7 @@ export const projectVideos = [
   },
 
   {
-    id: 8,
+    //id: 8,
     src: starOrganic,
     ssrc: starOrganic,
     href: "https://abd-starorganic.netlify.app",
@@ -181,7 +182,7 @@ export const projectVideos = [
   },
 
   {
-    id: 9,
+    //id: 9,
     src: webCommerce,
     ssrc: webCommerce,
     href: "https://abd-ecommerceweb.netlify.app",
@@ -190,6 +191,17 @@ export const projectVideos = [
     title: "E-commerce Web",
     description:
       "The E-commerce Web project marks my first web design experience.",
+  },
+
+  {
+    //id: 9,
+    src: carvan,
+    ssrc: carvan,
+    href: "https://abd-carvan.netlify.app",
+    laptop: laptop,
+    type: "video/mp4",
+    title: "CARVAN",
+    description: "This is a car website UI, which does not include a backend.",
   },
 ];
 
@@ -252,271 +264,325 @@ export const slideImg = [
   {
     id: 1,
     src: Url1,
+    title: "Url1",
     href: "#",
   },
   {
     id: 2,
     src: Url2,
+    title: "Url2",
     href: "#",
   },
   {
     id: 3,
     src: Url3,
+    title: "Url3",
     href: "#",
   },
   {
     id: 4,
     src: Url4,
+    title: "Url4",
     href: "#",
   },
   {
     id: 5,
     src: Url5,
+    title: "Url5",
     href: "#",
   },
   {
     id: 6,
     src: Url6,
+    title: "Url6",
     href: "#",
   },
   {
     id: 7,
     src: Url7,
+    title: "Url7",
     href: "#",
   },
   {
     id: 8,
     src: Url8,
+    title: "Url8",
     href: "#",
   },
   {
     id: 9,
     src: Url9,
+    title: "Url9",
     href: "#",
   },
   {
     id: 10,
     src: Url10,
+    title: "Url10",
     href: "#",
   },
   {
     id: 11,
     src: Url11,
+    title: "Url11",
     href: "#",
   },
   {
     id: 12,
     src: Url12,
+    title: "Url12",
     href: "#",
   },
   {
     id: 13,
     src: Url13,
+    title: "Url13",
     href: "#",
   },
   {
     id: 14,
     src: Url14,
+    title: "Url14",
     href: "#",
   },
   {
     id: 15,
     src: Url15,
+    title: "Url15",
     href: "#",
   },
   {
     id: 16,
     src: Url16,
+    title: "Url16",
     href: "#",
   },
   {
     id: 17,
     src: Url17,
+    title: "Url17",
     href: "#",
   },
   {
     id: 18,
     src: Url18,
+    title: "Url18",
     href: "#",
   },
   {
     id: 19,
     src: Url19,
+    title: "Url19",
     href: "#",
   },
   {
     id: 20,
     src: Url20,
+    title: "Url20",
     href: "#",
   },
   {
     id: 21,
     src: Url21,
+    title: "Url21",
     href: "#",
   },
   {
     id: 22,
     src: Url22,
+    title: "Url22",
     href: "#",
   },
   {
     id: 23,
     src: Url23,
+    title: "Url23",
     href: "#",
   },
   {
     id: 24,
     src: Url24,
+    title: "Url24",
     href: "#",
   },
   {
     id: 25,
     src: Url25,
+    title: "Url25",
     href: "#",
   },
   {
     id: 26,
     src: Url26,
+    title: "Url26",
     href: "#",
   },
   {
     id: 27,
     src: Url27,
+    title: "Url27",
     href: "#",
   },
   {
     id: 28,
     src: Url28,
+    title: "Url28",
     href: "#",
   },
   {
     id: 29,
     src: Url29,
+    title: "Url29",
     href: "#",
   },
   {
     id: 30,
     src: Url30,
+    title: "Url30",
     href: "#",
   },
   {
     id: 31,
     src: Url31,
+    title: "Url31",
     href: "#",
   },
   {
     id: 32,
     src: Url32,
+    title: "Url32",
     href: "#",
   },
   {
     id: 33,
     src: Url33,
+    title: "Url33",
     href: "#",
   },
   {
     id: 34,
     src: Url34,
+    title: "Url34",
     href: "#",
   },
   {
     id: 35,
     src: Url35,
+    title: "Url35",
     href: "#",
   },
   {
     id: 36,
     src: Url36,
+    title: "Url36",
     href: "#",
   },
   {
     id: 37,
     src: Url37,
+    title: "Url37",
     href: "#",
   },
   {
     id: 38,
     src: Url38,
+    title: "Url38",
     href: "#",
   },
   {
     id: 39,
     src: Url39,
+    title: "Url39",
     href: "#",
   },
   {
     id: 40,
     src: Url40,
+    title: "Url40",
     href: "#",
   },
   {
     id: 41,
     src: Url41,
+    title: "Url41",
     href: "#",
   },
   {
     id: 42,
     src: Url42,
+    title: "Url42",
     href: "#",
   },
   {
     id: 43,
     src: Url43,
+    title: "Url43",
     href: "#",
   },
   {
     id: 44,
     src: Url44,
+    title: "Url44",
     href: "#",
   },
   {
     id: 45,
     src: Url45,
+    title: "Url45",
     href: "#",
   },
   {
     id: 46,
     src: Url46,
+    title: "Url46",
     href: "#",
   },
   {
     id: 47,
     src: Url47,
+    title: "Url47",
     href: "#",
   },
   {
     id: 48,
     src: Url48,
+    title: "Url48",
     href: "#",
   },
   {
     id: 49,
     src: Url49,
+    title: "Url49",
     href: "#",
   },
   {
     id: 50,
     src: Url50,
+    title: "Url50",
     href: "#",
   },
   {
     id: 51,
     src: Url51,
+    title: "Url51",
     href: "#",
   },
   {
     id: 52,
     src: Url52,
+    title: "Url52",
     href: "#",
   },
   {
     id: 53,
     src: Url53,
+    title: "Url53",
     href: "#",
   },
   {
     id: 54,
     src: Url54,
+    title: "Url54",
     href: "#",
   },
 ];

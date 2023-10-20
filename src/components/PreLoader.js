@@ -2,7 +2,7 @@
 import styles from "@/styles/preloader.module.scss";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { slideUp } from "./animate"; 
+import { slideUp } from "./animate";
 
 const words = [
   "Loading",
@@ -12,7 +12,7 @@ const words = [
   "Loading assets",
   "Stay tuned",
   "Preparing content",
-  "Welcome"
+  "Welcome",
 ];
 
 export default function PreLoader() {
@@ -33,11 +33,21 @@ export default function PreLoader() {
     );
   }, [index]);
 
-  const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
-    dimension.height
-  } Q${dimension.width / 2} ${dimension.height + 300} 0 ${
-    dimension.height
-  }  L0 0`;
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Check if we're on the client side
+      setDimension({ width: window.innerWidth, height: window.innerHeight });
+    }
+  }, []);
+
+  const initialPath =
+    dimension.width > 1024
+      ? `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${
+          dimension.width / 2
+        } ${dimension.height + 300} 0 ${dimension.height}  L0 0`
+      : `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${
+          dimension.width / 2
+        } ${dimension.height + 150} 0 ${dimension.height}  L0 0`;
   const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
     dimension.height
   } Q${dimension.width / 2} ${dimension.height} 0 ${dimension.height}  L0 0`;

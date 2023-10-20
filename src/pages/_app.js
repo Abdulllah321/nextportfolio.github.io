@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import PreLoader from "@/components/PreLoader";
+import ogImage from "../../public/ogImge.png"
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -42,15 +43,46 @@ export default function App({ Component, pageProps }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <title>Abdullah Sufyan</title>
+        <meta
+          name="description"
+          content="Discover an enthusiastic MERN stack developer hailing from the vibrant city of Karachi, Pakistan. With a rich palette of skills encompassing HTML, CSS, JavaScript, Vue.js, React.js, Node.js, Express.js, MongoDB, and more, this developer excels in the art of full-stack development. Their passion lies in crafting web experiences that seamlessly merge stunning visuals with impeccable functionality. Proudly associated with notable achievements in the world of web development, they invite you to embark on an exciting journey with a focus on user-centric web designs that leave a lasting impact."
+        />
+        <meta
+          property="og:title"
+          content="Abdullah Sufyan •  Modern Website Designer & Developer"
+        />
+        <meta
+          property="og:description"
+          content="Meet Abdullah Sufyan, a skilled web developer from Karachi, Pakistan. With expertise in HTML, CSS, JavaScript, Vue.js, React.js, Node.js, Express.js, MongoDB, and more, he excels in full-stack development. Abdullah's passion is creating web designs that blend striking visuals with seamless functionality. Join him on his journey through the world of web development, where user-centric designs make a lasting impact."
+        />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content="https://abdullahsufyan.vercel.app/" />
+
+        <meta property="og:site_name" content="Abdullah Sufyan" />
+        <meta property="og:locale" content="en" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="twitter:title"
+          content="Abdullah Sufyan  •  Modern Website Designer & Developer"
+        />
+        <meta
+          property="twitter:description"
+          content="Meet Abdullah Sufyan, a skilled web developer from Karachi, Pakistan. With expertise in HTML, CSS, JavaScript, Vue.js, React.js, Node.js, Express.js, MongoDB, and more, he excels in full-stack development. Abdullah's passion is creating web designs that blend striking visuals with seamless functionality. Join him on his journey through the world of web development, where user-centric designs make a lasting impact."
+        />
+        <meta property="twitter:image" content={ogImage} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="google" content="notranslate" />
+        <meta
+          name="keywords"
+          content="Freelancer Portfolio, Web Designer, Web Developer, Modern Web Developer, Animated Website Designer, MERN Stack Developer, Full-Stack Developer, UI/UX Designer, Front-End Developer, Back-End Developer, Responsive Web Design, User-Centric Web Design, HTML, CSS, JavaScript, Vue.js, React.js, Node.js, Express.js, MongoDB, Tailwind CSS, Sass, Bootstrap, Framer Motion, ScrollTrigger, Nextjs developer, 3d website Developer, GSAP Animation, User Interface Design, Web Development Projects, TechWiz Participant, Karachi, Pakistan"
+        />
       </Head>
 
       <AnimatePresence mode="wait">
         {isLoading ? (
           <>
             <PreLoader />
-            <Head>
-              <title>Abdullah</title>
-            </Head>
           </>
         ) : (
           <motion.div

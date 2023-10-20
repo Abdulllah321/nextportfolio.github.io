@@ -6,6 +6,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { motion } from "framer-motion";
 import { slideImg } from "./Constants";
+import Skeleton from "react-loading-skeleton";
 
 function shuffleArray(array) {
   // Create a copy of the original array
@@ -56,7 +57,7 @@ export default function SlidingImages() {
     requestAnimationFrame(animate);
     xPercent += 0.01 * direction;
   };
-  
+
   return (
     <motion.div className={styles.sliderContainer}>
       <div ref={slider} className={`${styles.slider}`}>
@@ -64,12 +65,16 @@ export default function SlidingImages() {
           {shuffledSlideImg.map((slide, index) => (
             <Link href={slide.href} key={index}>
               <div className={styles.videos}>
-                <Image
-                  priority
-                  className={styles.video}
-                  src={slide.src}
-                  alt={slide.title}
-                />
+                {slide.isLoading ? (
+                  <Skeleton width={300} height={200} />
+                ) : (
+                  <Image
+                    priority
+                    className={styles.video}
+                    src={slide.src}
+                    alt={slide.title}
+                  />
+                )}
               </div>
             </Link>
           ))}

@@ -38,7 +38,7 @@ const about = () => {
   return (
     <>
       <Head>
-        <title>Abdullah || About page</title>
+        <title>Abdullah Sufyan || About </title>
         <meta
           name="description"
           content="Abdullah Sufyan, a passionate MERN stack developer from Karachi, Pakistan, specializes in full-stack development. Proficient in HTML, CSS, JavaScript, Vue.js, React.js, Node.js, Express.js, MongoDB, and more. With a focus on stunning visuals and functionality, Abdullah aims to shape exceptional user-centric web designs. He's proud of his achievements, including participation in TechWiz4. Join him on his web development journey!"
@@ -89,7 +89,7 @@ const about = () => {
                 development and design, creating impactful digital experiences.
               </p>
             </div>
-            <div className="mx-auto col-span-3 relative flex items-center justify-center w-full h-full xl:col-span-4 md:order-1 md:col-span-10 sm:col-span-11 xs:col-span-full ">
+            <div className="mx-auto col-span-3 relative flex items-center justify-center w-full h-full xl:col-span-4 md:order-1 md:col-span-10 sm:col-span-11 xs:col-span-full lg:mb-8 ">
               <div className="relative w-full h-max rounded-2xl border-2 border-solid border-[--dark] p-8 bg-[--light] transition-all duration-300 ease-out shadow-shadow dark:shadow-shadowDark">
                 <Image
                   src={ProfilePic}

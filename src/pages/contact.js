@@ -155,11 +155,11 @@ const Contact = () => {
   return (
     <>
       <Head>
-        <title>Abdullah || Contact page</title>
+        <title>Abdullah Sufyan || Contact</title>
         <meta name="description" content="my description" />
       </Head>
       <Layout>
-        <main className="py-32 w-full h-full relative z-[100] bg-[--light]">
+        <main className="py-32 w-full h-full relative z-[100] bg-[--light] px-6">
           <div className="slidersOfImages max-w-screen-[1280px] w-full flex max-w-[1280px] m-auto lg:flex-col-reverse lg:px-8 ">
             <div className="w-[70%] relative lg:w-full">
               <AnimatedText
