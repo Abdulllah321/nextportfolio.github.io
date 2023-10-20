@@ -10,6 +10,8 @@
   --grey: #808080;
   --darkLight: #1b1b1b60;
   --font-mont: "Montserrat", sans-serif;
+  --text-shadow: 0.5px 0.5px 2px rgba(27, 27, 27, 1),
+    3px 3px 5px rgba(27, 27, 27, 0.5);
 }
 
 .dark {
@@ -19,6 +21,8 @@
   --primary: #3498db;
   --grey: #808080;
   --darkLight: #f5f5f560;
+  --text-shadow: 0.5px 0.5px 2px rgba(245, 245, 245, 1),
+    3px 3px 5px rgba(245, 245, 245, 0.8), 5px 5px 15px rgba(245, 245, 245, 0.5);
 }
 
 * {
@@ -45,8 +49,7 @@ body {
 
 ::selection {
   background: transparent;
-  text-shadow: 2px 7px 5px var(--darkLight),
-    0px -4px 10px rgba(255, 255, 255, 0.3);
+  text-shadow: var(--text-shadow);
 }
 
 .svg {
