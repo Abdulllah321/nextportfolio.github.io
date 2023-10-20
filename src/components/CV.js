@@ -262,7 +262,7 @@ const CV = () => {
           <h1 className="text-light text-[3rem] mb-6 font-bold xs:text-[2rem] opacity-0">
             Abdullah Sufyan
           </h1>
-          <p className="text-light text-left ml-3 xs:line-clamp-[10] ">
+          <p className="text-light text-left ml-3 xs:line-clamp-[10] opacity-0">
             I&apos;m a web developer with a knack for creating all sorts of
             websites, both the front-end, which is what you see and interact
             with, and the back-end, the behind-the-scenes magic that makes
@@ -274,7 +274,7 @@ const CV = () => {
             message, and we can work together to bring your website dreams to
             life!
           </p>
-          <button className="w-3/4 mt-4 mx-4">
+          <button className="w-3/4 mt-4 mx-4 opacity-0">
             <Link href="/resume.pdf" target={"_blank"} download={true}>
               <Button>Download CV</Button>
             </Link>
