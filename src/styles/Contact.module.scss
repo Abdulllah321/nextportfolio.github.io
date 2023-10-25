@@ -179,15 +179,20 @@
     padding: 10px 15px !important;
     line-height: 5px !important;
   }
-  .icon{
+  .icon {
     display: none;
   }
   .input:focus + .span,
-  .input:valid + .span{
-        transform: translate(0px, -23px) scale(0.88) !important;
+  .input:valid + .span {
+    transform: translate(0px, -23px) scale(0.88) !important;
   }
-    .button{
-      width: 100px !important;
-      height: 100px !important;
-    }
+  .button {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
+@media screen and (max-width: 479px) {
+  .span{
+    font-size: .8rem !important;
+  }
 }
