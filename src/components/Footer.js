@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
-import Button from "@/components/Button";
-import MagneticButton from "./MagneticButton";
+import Button from "./Button";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import MagneticButton from "./MagneticButton";
 
 const Footer = () => {
   const date = new Date();
